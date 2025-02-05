@@ -1,0 +1,42 @@
+.lang_switcher {
+  margin-top: 15px;
+}
+
+.header_nav_link {
+  font-size: 14px;
+}
+.oferta_block {
+  padding: 50px 0;
+}
+
+@media screen and (max-width: 870px) {
+  .lang_switcher select {
+    padding: 5px 40px 5px 5px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .lang_switcher {
+    position: absolute;
+    top: -3.8%;
+    right: 1%;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .oferta_list li {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .lang_switcher {
+    position: absolute;
+    top: 100%;
+    right: 30%;
+  }
+
+  .oferta_list li {
+    margin: 0 10px;
+  }
+}
