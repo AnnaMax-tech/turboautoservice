@@ -940,7 +940,7 @@ input:focus {
   display: flex  ;
       flex-direction: row;
       justify-content: center;
-      gap: 80px;
+      gap: 30px;
 }
 .footer_nav,
 .footer_socials {
