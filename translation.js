@@ -391,7 +391,7 @@ const translations = {
     de: "Zurück zur Website",
   },
   politics_privacy: {
-    ua: "ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ",
+    ua: "Політика конфіденційності",
     en: "PRIVACY POLICY",
     de: "DATENSCHUTZRICHTLINIE",
   },

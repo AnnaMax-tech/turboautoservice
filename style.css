@@ -674,11 +674,15 @@ header {
   display: flex;
   text-align: center;
   gap: 50px;
+  justify-content: space-around;
 }
 
-.review_item {
-  width: 33%;
-}
+@media screen and (max-width: 552px) {
+  .review_item {
+    max-width: 300px;
+  }
+  }
+
 
 .review_item_img {
   border-radius: 50%;
@@ -796,7 +800,7 @@ header {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 input {
@@ -909,6 +913,61 @@ input:focus {
 }
 
 /* Footer */
+/* @media screen and (max-width: 552px) { */
+  .footer {
+    padding: 50px 20px;
+    background: #233545;
+  }
+  .footer_content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer_address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+   
+      h3{font-size: 20px;
+      }
+      a{font-size: 15px;
+        color: var(--primary-color);
+      }
+  }
+
+.footer_flex_socials{
+  display: flex  ;
+      flex-direction: row;
+      justify-content: center;
+      gap: 80px;
+}
+.footer_nav,
+.footer_socials {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  h3{
+
+    font-size: 20px;
+  }
+  a{
+    color: var(--primary-color);
+    font-size: 15px;
+  }
+}
+
+/* } */
+/* @media screen and (min-width: 768px){
+  .footer_content{
+
+  }
+  .footer_flex_socials{
+
+        gap: 100px;
+  }
+} */
+@media screen and (min-width: 1200px) {
 .footer {
   position: relative;
   padding: 100px 0;
@@ -925,6 +984,11 @@ input:focus {
 .footer_address {
   display: flex;
   flex-direction: column;
+}
+.footer_flex_socials{
+  display: flex;
+      flex-direction: row;
+      gap: 400px;
 }
 
 .footer_address_title {
@@ -950,13 +1014,35 @@ input:focus {
   cursor: pointer;
   margin-bottom: 20px;
 }
+}
 
+@media screen and (max-width: 552px) {
+  .copyright { 
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+     background: #1f303f;
+     padding: 20px 0;
+   }
+   .politics_link{
+      font-size: 10px;
+      margin-left: 0;
+   }
+   }
+   @media screen and (min-width: 553px) {
 .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
   position: relative;
-  padding: 20px 0;
   background: #1f303f;
+  padding: 20px 0;
   z-index: 5;
 }
+   }
 
 .copyright_text {
   color: #fff;
@@ -1340,7 +1426,8 @@ input:focus {
   }
 
   .counter_item_text {
-    font-size: 10px;
+    font-size: 12px;
+    max-width: 80px;
   }
 
   .about_figures {
@@ -1354,6 +1441,7 @@ input:focus {
   .form_button {
     margin-top: 20px;
     padding: 20px;
+    font-size: 15px;
   }
 
   .footer_address_title {
@@ -1373,15 +1461,15 @@ input:focus {
   .form-group input[type="tel"],
   .form-group select {
     /* padding: 5px 10px; */
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .shedule_title {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .feedback_shedule p {
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .about_image img {
@@ -1393,9 +1481,9 @@ input:focus {
     font-weight: 400;
   }
 
-  .review_item_img {
+  /* .review_item_img {
     display: none;
-  }
+  } */
 
   .clients_content {
     gap: 0;
@@ -1423,11 +1511,11 @@ input:focus {
 
 @media screen and (max-width: 470px) {
   .feedback_form {
-    width: 200px;
+    width: 350px;
   }
 
   .feedback_form h3 {
-    font-size: 10px;
+    font-size: 20px;
   }
 
   .politics_label {
@@ -1454,7 +1542,7 @@ input:focus {
   }
 
   .review_counter {
-    gap: 0;
+    gap: 10px;
   }
 
   .feedback_content {
