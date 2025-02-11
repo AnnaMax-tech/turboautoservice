@@ -308,7 +308,7 @@ const translations = {
   cleanings: {
     ua: "Кількість хімчисток",
     en: "Number of Interior Cleanings",
-    de: "Anzahl der Innenraumreinigungen",
+    de: "Anzahl der Innenreinigung",
   },
   studios: {
     ua: "Кількість студій",
