@@ -790,6 +790,12 @@ const translations = {
     en: "The transfer by the Buyer of their network identifiers – IP, MAC addresses, login, and password to third parties.",
     de: "Die Weitergabe von Netzwerkinformationen des Käufers – IP, MAC-Adresse, Login und Passwort an Dritte.",
   },
+  contact_subtitle:{
+    ua:"У вас залишилися питання? Будемо раді вам допомогти!",
+    en:"Do you have any questions? We will be happy to help you!",
+    de:"Haben Sie Fragen? Wir helfen Ihnen gerne weiter!",
+  },
+
 };
 
 // Текущий язык (по умолчанию — английский)

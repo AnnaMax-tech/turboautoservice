@@ -1,0 +1,18 @@
+/* .contact{} */
+
+.site-container{
+    background-color:var(--calendar-bg-color);
+}
+
+/* .contact_top{} */
+
+.second-title{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    padding: 20px 0;
+    text-align: center;
+    color:var( --primary-color);
+    text-shadow: 2px 2px 6px #000;
+}
+

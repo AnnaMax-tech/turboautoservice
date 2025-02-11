@@ -1,1011 +1,794 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      user-scalable="no"
-    />
-    <meta
-      name="description"
-      content="Professional car service in Austria: repair and maintenance of all car brands. Quality, reliability, and modern technology. Book your appointment today!"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://autoserviceavstia.com" />
-    <meta property="og:title" content="The best auto service in Austria" />
-    <meta
-      property="og:description"
-      content="Professional car service in Austria: repair and maintenance of all car brands. Quality, reliability, and modern technology. Book your appointment today!"
-    />
-    <meta
-      property="og:image"
-      content="https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css"
-      integrity="sha512-bZBu2H0+FGFz/stDN/L0k8J0G8qVsAL0ht1qg5kTwtAheiXwiRKyCq1frwfbSFSJN3jooR5kauE0YjtPzhZtJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/pageicon.jpg" type="image/jpg">
-    <script src="translation.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script src="slider.js" defer></script>
-    <title data-translate-key="site_title">Turbo Autoservice : Diagnose, Reparatur und Elektrik</title>
-  </head>
-  <body>
-    <!-- SVG Sprites START -->
-    <svg display="none">
-      <symbol id="phone" viewBox="0 0 24 24">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path
-            d="M15.5562 14.5477L15.1007 15.0272C15.1007 15.0272 14.0181 16.167 11.0631 13.0559C8.10812 9.94484 9.1907 8.80507 9.1907 8.80507L9.47752 8.50311C10.1841 7.75924 10.2507 6.56497 9.63424 5.6931L8.37326 3.90961C7.61028 2.8305 6.13596 2.68795 5.26145 3.60864L3.69185 5.26114C3.25823 5.71766 2.96765 6.30945 3.00289 6.96594C3.09304 8.64546 3.81071 12.259 7.81536 16.4752C12.0621 20.9462 16.0468 21.1239 17.6763 20.9631C18.1917 20.9122 18.6399 20.6343 19.0011 20.254L20.4217 18.7584C21.3806 17.7489 21.1102 16.0182 19.8833 15.312L17.9728 14.2123C17.1672 13.7486 16.1858 13.8848 15.5562 14.5477Z"
-            fill="#DD3751"
-          ></path>
-          <path
-            d="M13.2595 1.87983C13.3257 1.47094 13.7122 1.19357 14.1211 1.25976C14.1464 1.26461 14.2279 1.27983 14.2705 1.28933C14.3559 1.30834 14.4749 1.33759 14.6233 1.38082C14.9201 1.46726 15.3347 1.60967 15.8323 1.8378C16.8286 2.29456 18.1544 3.09356 19.5302 4.46936C20.906 5.84516 21.705 7.17097 22.1617 8.16725C22.3899 8.66487 22.5323 9.07947 22.6187 9.37625C22.6619 9.52466 22.6912 9.64369 22.7102 9.72901C22.7197 9.77168 22.7267 9.80594 22.7315 9.83125L22.7373 9.86245C22.8034 10.2713 22.5286 10.6739 22.1197 10.7401C21.712 10.8061 21.3279 10.53 21.2601 10.1231C21.258 10.1121 21.2522 10.0828 21.2461 10.0551C21.2337 9.9997 21.2124 9.91188 21.1786 9.79572C21.1109 9.56339 20.9934 9.21806 20.7982 8.79238C20.4084 7.94207 19.7074 6.76789 18.4695 5.53002C17.2317 4.29216 16.0575 3.59117 15.2072 3.20134C14.7815 3.00618 14.4362 2.88865 14.2038 2.82097C14.0877 2.78714 13.9417 2.75363 13.8863 2.7413C13.4793 2.67347 13.1935 2.28755 13.2595 1.87983Z"
-            fill="#DD3751"
-          ></path>
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M13.4857 5.3293C13.5995 4.93102 14.0146 4.7004 14.4129 4.81419L14.2069 5.53534C14.4129 4.81419 14.4129 4.81419 14.4129 4.81419L14.4144 4.81461L14.4159 4.81505L14.4192 4.81602L14.427 4.81834L14.4468 4.8245C14.4618 4.82932 14.4807 4.8356 14.5031 4.84357C14.548 4.85951 14.6074 4.88217 14.6802 4.91337C14.8259 4.97581 15.0249 5.07223 15.2695 5.21694C15.7589 5.50662 16.4271 5.9878 17.2121 6.77277C17.9971 7.55775 18.4782 8.22593 18.7679 8.7154C18.9126 8.95991 19.009 9.15897 19.0715 9.30466C19.1027 9.37746 19.1254 9.43682 19.1413 9.48173C19.1493 9.50418 19.1555 9.52301 19.1604 9.53809L19.1665 9.55788L19.1688 9.56563L19.1698 9.56896L19.1702 9.5705C19.1702 9.5705 19.1707 9.57194 18.4495 9.77798L19.1707 9.57194C19.2845 9.97021 19.0538 10.3853 18.6556 10.4991C18.2607 10.6119 17.8492 10.3862 17.7313 9.99413L17.7276 9.98335C17.7223 9.96832 17.7113 9.93874 17.6928 9.89554C17.6558 9.8092 17.5887 9.66797 17.4771 9.47938C17.2541 9.10264 16.8514 8.53339 16.1514 7.83343C15.4515 7.13348 14.8822 6.73078 14.5055 6.50781C14.3169 6.39619 14.1757 6.32909 14.0893 6.29209C14.0461 6.27358 14.0165 6.26254 14.0015 6.25721L13.9907 6.25352C13.5987 6.13564 13.3729 5.72419 13.4857 5.3293Z"
-            fill="#DD3751"
-          ></path>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" />
+  <meta name="description"
+    content="Professional car service in Austria: repair and maintenance of all car brands. Quality, reliability, and modern technology. Book your appointment today!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://autoserviceavstia.com" />
+  <meta property="og:title" content="The best auto service in Austria" />
+  <meta property="og:description"
+    content="Professional car service in Austria: repair and maintenance of all car brands. Quality, reliability, and modern technology. Book your appointment today!" />
+  <meta property="og:image"
+    content="https://images.pexels.com/photos/372810/pexels-photo-372810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css"
+    integrity="sha512-bZBu2H0+FGFz/stDN/L0k8J0G8qVsAL0ht1qg5kTwtAheiXwiRKyCq1frwfbSFSJN3jooR5kauE0YjtPzhZtJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/calendar.css" />
+  <link rel="stylesheet" href="css/politics.css" />
+  <link rel="icon" href="img/pageicon.jpg" type="image/jpg">
+  <script src="translation.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="slider.js" defer></script>
+  <title data-translate-key="site_title">Turbo Autoservice : Diagnose, Reparatur und Elektrik</title>
+</head>
+
+<body>
+  <!-- SVG Sprites START -->
+  <svg display="none">
+    <symbol id="phone" viewBox="0 0 24 24">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M15.5562 14.5477L15.1007 15.0272C15.1007 15.0272 14.0181 16.167 11.0631 13.0559C8.10812 9.94484 9.1907 8.80507 9.1907 8.80507L9.47752 8.50311C10.1841 7.75924 10.2507 6.56497 9.63424 5.6931L8.37326 3.90961C7.61028 2.8305 6.13596 2.68795 5.26145 3.60864L3.69185 5.26114C3.25823 5.71766 2.96765 6.30945 3.00289 6.96594C3.09304 8.64546 3.81071 12.259 7.81536 16.4752C12.0621 20.9462 16.0468 21.1239 17.6763 20.9631C18.1917 20.9122 18.6399 20.6343 19.0011 20.254L20.4217 18.7584C21.3806 17.7489 21.1102 16.0182 19.8833 15.312L17.9728 14.2123C17.1672 13.7486 16.1858 13.8848 15.5562 14.5477Z"
+          fill="#DD3751"></path>
+        <path
+          d="M13.2595 1.87983C13.3257 1.47094 13.7122 1.19357 14.1211 1.25976C14.1464 1.26461 14.2279 1.27983 14.2705 1.28933C14.3559 1.30834 14.4749 1.33759 14.6233 1.38082C14.9201 1.46726 15.3347 1.60967 15.8323 1.8378C16.8286 2.29456 18.1544 3.09356 19.5302 4.46936C20.906 5.84516 21.705 7.17097 22.1617 8.16725C22.3899 8.66487 22.5323 9.07947 22.6187 9.37625C22.6619 9.52466 22.6912 9.64369 22.7102 9.72901C22.7197 9.77168 22.7267 9.80594 22.7315 9.83125L22.7373 9.86245C22.8034 10.2713 22.5286 10.6739 22.1197 10.7401C21.712 10.8061 21.3279 10.53 21.2601 10.1231C21.258 10.1121 21.2522 10.0828 21.2461 10.0551C21.2337 9.9997 21.2124 9.91188 21.1786 9.79572C21.1109 9.56339 20.9934 9.21806 20.7982 8.79238C20.4084 7.94207 19.7074 6.76789 18.4695 5.53002C17.2317 4.29216 16.0575 3.59117 15.2072 3.20134C14.7815 3.00618 14.4362 2.88865 14.2038 2.82097C14.0877 2.78714 13.9417 2.75363 13.8863 2.7413C13.4793 2.67347 13.1935 2.28755 13.2595 1.87983Z"
+          fill="#DD3751"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M13.4857 5.3293C13.5995 4.93102 14.0146 4.7004 14.4129 4.81419L14.2069 5.53534C14.4129 4.81419 14.4129 4.81419 14.4129 4.81419L14.4144 4.81461L14.4159 4.81505L14.4192 4.81602L14.427 4.81834L14.4468 4.8245C14.4618 4.82932 14.4807 4.8356 14.5031 4.84357C14.548 4.85951 14.6074 4.88217 14.6802 4.91337C14.8259 4.97581 15.0249 5.07223 15.2695 5.21694C15.7589 5.50662 16.4271 5.9878 17.2121 6.77277C17.9971 7.55775 18.4782 8.22593 18.7679 8.7154C18.9126 8.95991 19.009 9.15897 19.0715 9.30466C19.1027 9.37746 19.1254 9.43682 19.1413 9.48173C19.1493 9.50418 19.1555 9.52301 19.1604 9.53809L19.1665 9.55788L19.1688 9.56563L19.1698 9.56896L19.1702 9.5705C19.1702 9.5705 19.1707 9.57194 18.4495 9.77798L19.1707 9.57194C19.2845 9.97021 19.0538 10.3853 18.6556 10.4991C18.2607 10.6119 17.8492 10.3862 17.7313 9.99413L17.7276 9.98335C17.7223 9.96832 17.7113 9.93874 17.6928 9.89554C17.6558 9.8092 17.5887 9.66797 17.4771 9.47938C17.2541 9.10264 16.8514 8.53339 16.1514 7.83343C15.4515 7.13348 14.8822 6.73078 14.5055 6.50781C14.3169 6.39619 14.1757 6.32909 14.0893 6.29209C14.0461 6.27358 14.0165 6.26254 14.0015 6.25721L13.9907 6.25352C13.5987 6.13564 13.3729 5.72419 13.4857 5.3293Z"
+          fill="#DD3751"></path>
+      </g>
+    </symbol>
+
+    <symbol id="map" viewBox="0 0 16 16">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M3.37892 10.2236L8 16L12.6211 10.2236C13.5137 9.10788 14 7.72154 14 6.29266V6C14 2.68629 11.3137 0 8 0C4.68629 0 2 2.68629 2 6V6.29266C2 7.72154 2.4863 9.10788 3.37892 10.2236ZM8 8C9.10457 8 10 7.10457 10 6C10 4.89543 9.10457 4 8 4C6.89543 4 6 4.89543 6 6C6 7.10457 6.89543 8 8 8Z"
+          fill="#DD3751"></path>
+      </g>
+    </symbol>
+
+    <symbol id="mail" viewBox="0 -3.5 32 32">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <title>mail</title>
+        <desc>Created with Sketch Beta.</desc>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" sketch:type="MSPage">
+          <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-414.000000, -261.000000)"
+            fill="#DD3751">
+            <path
+              d="M430,275.916 L426.684,273.167 L415.115,285.01 L444.591,285.01 L433.235,273.147 L430,275.916 L430,275.916 Z M434.89,271.89 L445.892,283.329 C445.955,283.107 446,282.877 446,282.634 L446,262.862 L434.89,271.89 L434.89,271.89 Z M414,262.816 L414,282.634 C414,282.877 414.045,283.107 414.108,283.329 L425.147,271.927 L414,262.816 L414,262.816 Z M445,261 L415,261 L430,273.019 L445,261 L445,261 Z"
+              id="mail" sketch:type="MSShapeGroup"></path>
+          </g>
         </g>
-      </symbol>
+      </g>
+    </symbol>
 
-      <symbol id="map" viewBox="0 0 16 16">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M3.37892 10.2236L8 16L12.6211 10.2236C13.5137 9.10788 14 7.72154 14 6.29266V6C14 2.68629 11.3137 0 8 0C4.68629 0 2 2.68629 2 6V6.29266C2 7.72154 2.4863 9.10788 3.37892 10.2236ZM8 8C9.10457 8 10 7.10457 10 6C10 4.89543 9.10457 4 8 4C6.89543 4 6 4.89543 6 6C6 7.10457 6.89543 8 8 8Z"
-            fill="#DD3751"
-          ></path>
-        </g>
-      </symbol>
+    <symbol id="viber" viewBox="0 0 24 24">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M13 4C12.4477 4 12 4.44772 12 5C12 5.55228 12.4477 6 13 6C14.2728 6 15.2557 6.41989 15.9179 7.08211C16.5801 7.74433 17 8.72725 17 10C17 10.5523 17.4477 11 18 11C18.5523 11 19 10.5523 19 10C19 8.27275 18.4199 6.75567 17.3321 5.66789C16.2443 4.58011 14.7272 4 13 4Z"
+          fill="#DD3751"></path>
+        <path
+          d="M5.014 8.00613C5.12827 7.1024 6.30277 5.87414 7.23488 6.01043L7.23339 6.00894C8.01251 6.15699 8.65217 7.32965 9.07373 8.10246C9.14298 8.22942 9.20635 8.34559 9.26349 8.44465C9.55041 8.95402 9.3641 9.4701 9.09655 9.68787C9.06561 9.7128 9.03317 9.73855 8.9998 9.76504C8.64376 10.0477 8.18114 10.4149 8.28943 10.7834C8.5 11.5 11 14 12.2296 14.7107C12.6061 14.9283 12.8988 14.5057 13.1495 14.1438C13.2087 14.0583 13.2656 13.9762 13.3207 13.9067C13.5301 13.6271 14.0466 13.46 14.5548 13.736C15.3138 14.178 16.0288 14.6917 16.69 15.27C17.0202 15.546 17.0977 15.9539 16.8689 16.385C16.4659 17.1443 15.3003 18.1456 14.4542 17.9421C12.9764 17.5868 7 15.27 5.08033 8.55801C4.97981 8.26236 4.99645 8.13792 5.01088 8.02991L5.014 8.00613Z"
+          fill="#DD3751"></path>
+        <path
+          d="M13 7C12.4477 7 12 7.44772 12 8C12 8.55228 12.4477 9 13 9C13.1748 9 13.4332 9.09745 13.6679 9.33211C13.9025 9.56676 14 9.82523 14 10C14 10.5523 14.4477 11 15 11C15.5523 11 16 10.5523 16 10C16 9.17477 15.5975 8.43324 15.0821 7.91789C14.5668 7.40255 13.8252 7 13 7Z"
+          fill="#DD3751"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M7.51742 23.8312C7.54587 23.8469 7.57508 23.8612 7.60492 23.874C8.14762 24.1074 8.81755 23.5863 10.1574 22.5442L11.5 21.5C14.1884 21.589 16.514 21.2362 18.312 20.6071C20.3227 19.9035 21.9036 18.3226 22.6072 16.3119C23.5768 13.541 23.5768 8.45883 22.6072 5.68794C21.9036 3.67722 20.3227 2.0963 18.312 1.39271C15.1103 0.272407 8.82999 0.293306 5.68806 1.39271C3.67733 2.0963 2.09642 3.67722 1.39283 5.68794C0.423255 8.45883 0.423255 13.541 1.39283 16.3119C2.09642 18.3226 3.67733 19.9035 5.68806 20.6071C6.08252 20.7451 6.52371 20.8965 7 21C7 22.6974 7 23.5461 7.51742 23.8312ZM9 20.9107V19.7909C9 19.5557 8.836 19.3524 8.60597 19.3032C7.84407 19.1403 7.08676 18.9776 6.34862 18.7193C4.91238 18.2168 3.78316 17.0875 3.2806 15.6513C2.89871 14.5599 2.66565 12.8453 2.66565 10.9999C2.66565 9.15453 2.89871 7.43987 3.2806 6.3485C3.78316 4.91227 4.91238 3.78304 6.34862 3.28048C7.61625 2.83692 9.71713 2.56282 11.9798 2.56032C14.2422 2.55782 16.3561 2.82723 17.6514 3.28048C19.0876 3.78304 20.2169 4.91227 20.7194 6.3485C21.1013 7.43987 21.3344 9.15453 21.3344 10.9999C21.3344 12.8453 21.1013 14.5599 20.7194 15.6513C20.2169 17.0875 19.0876 18.2168 17.6514 18.7193C15.5197 19.4652 13.259 19.549 11.0239 19.4828C10.9071 19.4794 10.7926 19.5165 10.7004 19.5882L9 20.9107Z"
+          fill="#DD3751"></path>
+      </g>
+    </symbol>
 
-      <symbol id="mail" viewBox="0 -3.5 32 32">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <title>mail</title>
-          <desc>Created with Sketch Beta.</desc>
-          <defs></defs>
-          <g id="Page-1" stroke="none" stroke-width="1" sketch:type="MSPage">
-            <g
-              id="Icon-Set-Filled"
-              sketch:type="MSLayerGroup"
-              transform="translate(-414.000000, -261.000000)"
-              fill="#DD3751"
-            >
+    <symbol id="telegram" viewBox="0 0 32 32">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <title>telegram</title>
+        <path
+          d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z"
+          fill="#DD3751"></path>
+      </g>
+    </symbol>
+
+    <symbol id="whatsapp" viewBox="0 0 20 20">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <title>whatsapp [#128]</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7599.000000)" fill="#DD3751">
+            <g id="icons" transform="translate(56.000000, 160.000000)">
               <path
-                d="M430,275.916 L426.684,273.167 L415.115,285.01 L444.591,285.01 L433.235,273.147 L430,275.916 L430,275.916 Z M434.89,271.89 L445.892,283.329 C445.955,283.107 446,282.877 446,282.634 L446,262.862 L434.89,271.89 L434.89,271.89 Z M414,262.816 L414,282.634 C414,282.877 414.045,283.107 414.108,283.329 L425.147,271.927 L414,262.816 L414,262.816 Z M445,261 L415,261 L430,273.019 L445,261 L445,261 Z"
-                id="mail"
-                sketch:type="MSShapeGroup"
-              ></path>
+                d="M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439"
+                id="whatsapp-[#128]"></path>
             </g>
           </g>
         </g>
-      </symbol>
+      </g>
+    </symbol>
+  </svg>
+  <!-- SVG Sprites END -->
 
-      <symbol id="viber" viewBox="0 0 24 24">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <path
-            d="M13 4C12.4477 4 12 4.44772 12 5C12 5.55228 12.4477 6 13 6C14.2728 6 15.2557 6.41989 15.9179 7.08211C16.5801 7.74433 17 8.72725 17 10C17 10.5523 17.4477 11 18 11C18.5523 11 19 10.5523 19 10C19 8.27275 18.4199 6.75567 17.3321 5.66789C16.2443 4.58011 14.7272 4 13 4Z"
-            fill="#DD3751"
-          ></path>
-          <path
-            d="M5.014 8.00613C5.12827 7.1024 6.30277 5.87414 7.23488 6.01043L7.23339 6.00894C8.01251 6.15699 8.65217 7.32965 9.07373 8.10246C9.14298 8.22942 9.20635 8.34559 9.26349 8.44465C9.55041 8.95402 9.3641 9.4701 9.09655 9.68787C9.06561 9.7128 9.03317 9.73855 8.9998 9.76504C8.64376 10.0477 8.18114 10.4149 8.28943 10.7834C8.5 11.5 11 14 12.2296 14.7107C12.6061 14.9283 12.8988 14.5057 13.1495 14.1438C13.2087 14.0583 13.2656 13.9762 13.3207 13.9067C13.5301 13.6271 14.0466 13.46 14.5548 13.736C15.3138 14.178 16.0288 14.6917 16.69 15.27C17.0202 15.546 17.0977 15.9539 16.8689 16.385C16.4659 17.1443 15.3003 18.1456 14.4542 17.9421C12.9764 17.5868 7 15.27 5.08033 8.55801C4.97981 8.26236 4.99645 8.13792 5.01088 8.02991L5.014 8.00613Z"
-            fill="#DD3751"
-          ></path>
-          <path
-            d="M13 7C12.4477 7 12 7.44772 12 8C12 8.55228 12.4477 9 13 9C13.1748 9 13.4332 9.09745 13.6679 9.33211C13.9025 9.56676 14 9.82523 14 10C14 10.5523 14.4477 11 15 11C15.5523 11 16 10.5523 16 10C16 9.17477 15.5975 8.43324 15.0821 7.91789C14.5668 7.40255 13.8252 7 13 7Z"
-            fill="#DD3751"
-          ></path>
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M7.51742 23.8312C7.54587 23.8469 7.57508 23.8612 7.60492 23.874C8.14762 24.1074 8.81755 23.5863 10.1574 22.5442L11.5 21.5C14.1884 21.589 16.514 21.2362 18.312 20.6071C20.3227 19.9035 21.9036 18.3226 22.6072 16.3119C23.5768 13.541 23.5768 8.45883 22.6072 5.68794C21.9036 3.67722 20.3227 2.0963 18.312 1.39271C15.1103 0.272407 8.82999 0.293306 5.68806 1.39271C3.67733 2.0963 2.09642 3.67722 1.39283 5.68794C0.423255 8.45883 0.423255 13.541 1.39283 16.3119C2.09642 18.3226 3.67733 19.9035 5.68806 20.6071C6.08252 20.7451 6.52371 20.8965 7 21C7 22.6974 7 23.5461 7.51742 23.8312ZM9 20.9107V19.7909C9 19.5557 8.836 19.3524 8.60597 19.3032C7.84407 19.1403 7.08676 18.9776 6.34862 18.7193C4.91238 18.2168 3.78316 17.0875 3.2806 15.6513C2.89871 14.5599 2.66565 12.8453 2.66565 10.9999C2.66565 9.15453 2.89871 7.43987 3.2806 6.3485C3.78316 4.91227 4.91238 3.78304 6.34862 3.28048C7.61625 2.83692 9.71713 2.56282 11.9798 2.56032C14.2422 2.55782 16.3561 2.82723 17.6514 3.28048C19.0876 3.78304 20.2169 4.91227 20.7194 6.3485C21.1013 7.43987 21.3344 9.15453 21.3344 10.9999C21.3344 12.8453 21.1013 14.5599 20.7194 15.6513C20.2169 17.0875 19.0876 18.2168 17.6514 18.7193C15.5197 19.4652 13.259 19.549 11.0239 19.4828C10.9071 19.4794 10.7926 19.5165 10.7004 19.5882L9 20.9107Z"
-            fill="#DD3751"
-          ></path>
-        </g>
-      </symbol>
+  <!-- Header -->
+  <header>
+    <div class="top_header" id="top_header">
+      <div class="container">
+        <div class="top_header_content">
+          <span class="top_header_icon">
+            <svg>
+              <use xlink:href="#phone"></use>
+            </svg>
+            <div class="top_header_icon_text">
+              <h4 class="top_header_icon_title" data-translate-key="topheader_phone">Телефон</h4>
+              <a href="tel:+436602430111" class="top_header_icon_subtitle"> +43 677 61977808</a>
+            </div>
+          </span>
 
-      <symbol id="telegram" viewBox="0 0 32 32">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <title>telegram</title>
-          <path
-            d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z"
-            fill="#DD3751"
-          ></path>
-        </g>
-      </symbol>
+          <span class="top_header_icon">
+            <svg>
+              <use xlink:href="#map"></use>
+            </svg>
+            <div class="top_header_icon_text">
+              <a href="https://www.google.com/maps/dir//La%C3%9Fnitzthal+300,+8200+La%C3%9Fnitzthal,+%D0%90%D0%B2%D1%81%D1%82%D1%80%D0%B8%D1%8F/@47.0788412,15.6473568,17z/data=!4m18!1m8!3m7!1s0x476e4de11889771b:0x15a56e06f63a932d!2zTGHDn25pdHp0aGFsIDMwMCwgODIwMCBMYcOfbml0enRoYWwsINCQ0LLRgdGC0YDQuNGP!3b1!8m2!3d47.0788412!4d15.6473568!16s%2Fg%2F11c2g8hg69!4m8!1m0!1m5!1m1!1s0x476e4de11889771b:0x15a56e06f63a932d!2m2!1d15.6473568!2d47.0788412!3e3?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw&utm_source=header&utm_medium=maps&utm_campaign=address"
+                target="_blank">
+                <h4 class="top_header_icon_title">Laßnitzthal 300, 8200</h4>
+                <p class="top_header_icon_subtitle">
+                  Gleisdorf, Austria
+                </p>
+              </a>
+            </div>
+          </span>
 
-      <symbol id="whatsapp" viewBox="0 0 20 20">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          <title>whatsapp [#128]</title>
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <g
-            id="Page-1"
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <g
-              id="Dribbble-Light-Preview"
-              transform="translate(-300.000000, -7599.000000)"
-              fill="#DD3751"
-            >
-              <g id="icons" transform="translate(56.000000, 160.000000)">
-                <path
-                  d="M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439"
-                  id="whatsapp-[#128]"
-                ></path>
-              </g>
-            </g>
-          </g>
-        </g>
-      </symbol>
-    </svg>
-    <!-- SVG Sprites END -->
+          <span class="top_header_icon">
+            <svg>
+              <use xlink:href="#mail"></use>
+            </svg>
+            <div class="top_header_icon_text">
+              <h4 class="top_header_icon_title" data-translate-key="topheader_email">
+                Ел. пошта
+              </h4>
+              <a href="mailto:info.autodienst.at@gmail.com?utm_source=header&utm_medium=email&utm_campaign=contact"
+                class="top_header_icon_subtitle">info.autodienst.at@gmail.com</a>
+            </div>
+          </span>
 
-    <!-- Header -->
-    <header>
-      <div class="top_header" id="top_header">
-        <div class="container">
-          <div class="top_header_content">
-            <span class="top_header_icon">
-              <svg>
-                <use xlink:href="#phone"></use>
-              </svg>
-              <div class="top_header_icon_text">
-                <h4 class="top_header_icon_title" data-translate-key="topheader_phone">Телефон</h4>
-                <a href="tel:+436602430111" class="top_header_icon_subtitle"
-                  > +43 677 61977808</a
-                >
-                <!-- проверить номер тел +43 677 61977808 -->
-              </div>
-            </span>
+          <span class="top_header_icon">
+            <svg>
+              <use xlink:href="#viber"></use>
+            </svg>
+            <div class="top_header_icon_text">
+              <h4 class="top_header_icon_title">Viber</h4>
+              <a href="viber://chat?number=%2B436602430111&utm_source=header&utm_medium=social&utm_campaign=viber"
+                class="top_header_icon_subtitle" target="_blank" data-translate-key="topheader_contact">Contact</a>
+            </div>
+          </span>
 
-            <span class="top_header_icon">
-              <svg>
-                <use xlink:href="#map"></use>
-              </svg>
-              <div class="top_header_icon_text">
-                <a
-                  href="https://www.google.com/maps/dir//La%C3%9Fnitzthal+300,+8200+La%C3%9Fnitzthal,+%D0%90%D0%B2%D1%81%D1%82%D1%80%D0%B8%D1%8F/@47.0788412,15.6473568,17z/data=!4m18!1m8!3m7!1s0x476e4de11889771b:0x15a56e06f63a932d!2zTGHDn25pdHp0aGFsIDMwMCwgODIwMCBMYcOfbml0enRoYWwsINCQ0LLRgdGC0YDQuNGP!3b1!8m2!3d47.0788412!4d15.6473568!16s%2Fg%2F11c2g8hg69!4m8!1m0!1m5!1m1!1s0x476e4de11889771b:0x15a56e06f63a932d!2m2!1d15.6473568!2d47.0788412!3e3?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw&utm_source=header&utm_medium=maps&utm_campaign=address"
-                  target="_blank"
-                >
-                  <h4 class="top_header_icon_title">Laßnitzthal 300, 8200</h4>
-                  <p class="top_header_icon_subtitle" >
-                    Gleisdorf, Austria
-                  </p>
-                </a>
-              </div>
-            </span>
+          <span class="top_header_icon">
+            <svg>
+              <use xlink:href="#telegram"></use>
+            </svg>
+            <div class="top_header_icon_text">
+              <h4 class="top_header_icon_title">Telegram</h4>
+              <a href="https://t.me/+436602430111?utm_source=header&utm_medium=social&utm_campaign=telegram"
+                class="top_header_icon_subtitle" target="_blank" data-translate-key="topheader_contact">Contact</a>
+            </div>
+          </span>
 
-            <span class="top_header_icon">
-              <svg>
-                <use xlink:href="#mail"></use>
-              </svg>
-              <div class="top_header_icon_text">
-                <h4 class="top_header_icon_title" data-translate-key="topheader_email">
-                  Ел. пошта
-                </h4>
-                <a
-                  href="mailto:info.autodienst.at@gmail.com?utm_source=header&utm_medium=email&utm_campaign=contact"
-                  class="top_header_icon_subtitle"
-                  >info.autodienst.at@gmail.com</a
-                >
-              </div>
-            </span>
+          <span class="top_header_icon">
+            <svg>
+              <use xlink:href="#whatsapp"></use>
+            </svg>
+            <div class="top_header_icon_text">
+              <h4 class="top_header_icon_title">Whatsapp</h4>
+              <a href="https://wa.me/436602430111?utm_source=header&utm_medium=social&utm_campaign=whatsapp"
+                class="top_header_icon_subtitle" target="_blank" data-translate-key="topheader_contact">Contact</a>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="main_header">
+      <div class="header_logo"></div>
+      <div class="header_nav">
+        <nav>
+          <a href="#top_header" class="header_nav_link" id="header_nav_main"
+            data-translate-key="header_main">Головна</a>
+          <a href="#about" class="header_nav_link" id="header_nav_about" data-translate-key="header_about">Про нас</a>
+          <a href="#services" class="header_nav_link" data-translate-key="header_services">Наші послуги</a>
+          <a href="#clients" class="header_nav_link" data-translate-key="header_reviews">Відгуки</a>
+          <a href="#footer" class="header_nav_link" data-translate-key="header_contacts">Контакти</a>
+        </nav>
+        <div class="lang_switcher">
+          <select id="lang_select">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+            <option value="ua">Українська</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
 
-            <span class="top_header_icon">
-              <svg>
-                <use xlink:href="#viber"></use>
-              </svg>
-              <div class="top_header_icon_text">
-                <h4 class="top_header_icon_title">Viber</h4>
-                <a
-                  href="viber://chat?number=%2B436602430111&utm_source=header&utm_medium=social&utm_campaign=viber"
-                  class="top_header_icon_subtitle"
-                  target="_blank"
-                  data-translate-key="topheader_contact"
-                  >Contact</a
-                >
-              </div>
-            </span>
+  <!-- Burger -->
 
-            <span class="top_header_icon">
-              <svg>
-                <use xlink:href="#telegram"></use>
-              </svg>
-              <div class="top_header_icon_text">
-                <h4 class="top_header_icon_title">Telegram</h4>
-                <a
-                  href="https://t.me/+436602430111?utm_source=header&utm_medium=social&utm_campaign=telegram"
-                  class="top_header_icon_subtitle"
-                  target="_blank"
-                  data-translate-key="topheader_contact"
-                  >Contact</a
-                >
-              </div>
-            </span>
+  <div class="burger-menu">
+    <div class="lang_switcher">
+      <select id="lang_select">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="ua">Українська</option>
+      </select>
+    </div>
+    <div class="burger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="burger-nav" id="burgerNav">
+      <a href="#top_header" class="header_nav_link" data-translate-key="header_main">Головна</a>
+      <a href="#about" class="header_nav_link" data-translate-key="header_about">Про нас</a>
+      <a href="#services" class="header_nav_link" data-translate-key="header_services">Наші послуги</a>
+      <a href="#clients" class="header_nav_link" data-translate-key="header_reviews">Відгуки</a>
+      <a href="#footer" class="header_nav_link" data-translate-key="header_contacts">Контакти</a>
+    </nav>
+  </div>
 
-            <span class="top_header_icon">
-              <svg>
-                <use xlink:href="#whatsapp"></use>
-              </svg>
-              <div class="top_header_icon_text">
-                <h4 class="top_header_icon_title">Whatsapp</h4>
-                <a
-                  href="https://wa.me/436602430111?utm_source=header&utm_medium=social&utm_campaign=whatsapp"
-                  class="top_header_icon_subtitle"
-                  target="_blank"
-                  data-translate-key="topheader_contact"
-                  >Contact</a
-                >
-              </div>
-            </span>
+  <!-- Intro -->
+  <div class="intro" id="intro">
+
+    <div class="intro_video">
+      <video autoplay loop muted playsinline>
+        <source src="img/introbg.mp4" />
+      </video>
+    </div>
+
+    <div class="intro_content">
+      <h1 class="intro_content_title" data-translate-key="intro">
+        Professionelle Autowartung und Reparatur in Gleisdorf
+      </h1>
+      <a href="#feedback">
+        <button class="intro_content_button" data-translate-key="signService">
+          Записатися на сервіс
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="about" id="about">
+    <div class="container">
+      <div class="about_content">
+        <h2 class="about_title" data-translate-key="about_title">Про Нас</h2>
+
+        <div class="about_info">
+          <div class="about_image">
+            <img src="img/aboutimage.jpg" alt="about" />
+          </div>
+
+          <div class="about_text">
+            <p data-translate-key="about_first_text">
+              Автосервіс Тurboautoservice— це професійний догляд за вашим автомобілем. Ми спеціалізуємося на ремонтних і
+              детейлінгових послугах, поєднуючи швидкість, якість і уважність до деталей.
+            </p>
+            <p class="about_why" data-translate-key="about_second_text">Чому ми?
+            </p>
+            <p data-translate-key="about_third_text">
+              Експертність: Досвідчені майстри забезпечують надійний сервіс із гарантією.
+            </p>
+            <p data-translate-key="about_fourth_text">Оперативність: Завдяки системі запису ваш автомобіль завжди
+              готовий вчасно.</p>
+            <p data-translate-key="about_fiveth_text">Індивідуальний підхід: Ми дбаємо про кожну деталь, щоб ваше авто
+              виглядало бездоганно.</p>
+            <p data-translate-key="about_fiveth_text">Обираючи Тurboautoservice, ви отримуєте більше, ніж просто сервіс
+              — ви отримуєте надійність і турботу про ваше авто.</p>
+          </div>
+        </div>
+
+        <div class="about_figures">
+          <span class="figure_item">
+            <p class="figure">1</p>
+            <span class="figure_text" data-translate-key="about_first_figure">Кваліфіковані спеціалісти завжди готові
+              надати якісні послуги
+              нашим клієнтам з гарантією</span>
+          </span>
+
+          <span class="figure_item">
+            <p class="figure">2</p>
+            <span class="figure_text" data-translate-key="about_second_figure">Кожного дня в нас працює контакт-центр
+              для консультації та
+              записів наших клієнтів</span>
+          </span>
+
+          <span class="figure_item">
+            <p class="figure">3</p>
+            <span class="figure_text" data-translate-key="about_third_figure">Ми прагнемо оптимізувати процес покращення
+              Вашого авто і надати
+              послуги високоякісно та швидко</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="services" id="services">
+    <div class="container">
+      <h2 class="services_title" data-translate-key="services_title">Наші Послуги</h2>
+      <div class="services_cards">
+        <div class="sevices_card_item">
+          <div class="card_img_block">
+            <img class="card_image" src="img/detailing128.png" alt="detailing" loading="lazy" />
+          </div>
+
+          <h3 class="card_title" data-translate-key="card_detailing">Premium Car Detailing - Sauberkeit und Pflege für
+            Ihr Auto</h3>
+          <ul class="service_card_list">
+            <li data-translate-key="detailing_first_li">
+              Глибоке очищення салону від пилу та бруду за допомогою
+              спеціалізованих засобів.
+            </li>
+            <li data-translate-key="detailing_second_li">
+              Захист і реставрація шкіряних та тканинних сидінь, а також інших
+              поверхонь.
+            </li>
+            <li data-translate-key="detailing_third_li">
+              Усунення неприємних запахів і дезінфекція для створення
+              комфортної атмосфери.
+            </li>
+          </ul>
+          <div class="card_button_block">
+            <button class="card_btn" data-translate-key="card_btn">
+              Детальніше
+            </button>
+          </div>
+        </div>
+
+        <div class="sevices_card_item">
+          <div class="card_img_block">
+            <img class="card_image" src="img/diagnostic128.png" alt="diagnostic" loading="lazy" />
+          </div>
+          <h3 class="card_title" data-translate-key="card_diagnostic">Präzise Autodiagnose - schnelles Erkennen von
+            Fehlern</h3>
+          <ul class="service_card_list">
+            <li data-translate-key="diagnostic_first_li">
+              Комп'ютерна діагностика електронних систем автомобіля.
+            </li>
+            <li data-translate-key="diagnostic_second_li">
+              Перевірка роботи двигуна, трансмісії та інших ключових систем.
+            </li>
+            <li data-translate-key="diagnostic_third_li">
+              Визначення можливих несправностей та рекомендації щодо їх
+              усунення.
+            </li>
+          </ul>
+          <div class="card_button_block">
+            <button class="card_btn" data-translate-key="card_btn">
+              Детальніше
+            </button>
+          </div>
+        </div>
+
+        <div class="sevices_card_item">
+          <img class="card_image" src="img/electronics128.png" alt="electronics" loading="lazy" />
+          <h3 class="card_title" data-translate-key="card_electrics">
+            Zuverlässiger Fahrzeugelektrik-Service
+          </h3>
+          <ul class="service_card_list">
+            <li data-translate-key="electrics_first_li">
+              Ремонт та заміна електричних компонентів автомобіля
+              (акумулятори, стартери, генератори).
+            </li>
+            <li data-translate-key="electrics_second_li">
+              Виправлення проблем з освітленням, проводкою та електронними
+              системами.
+            </li>
+            <li data-translate-key="electrics_third_li">
+              Встановлення додаткових електронних пристроїв (сигналізацій,
+              парктроніків, мультимедійних систем).
+            </li>
+          </ul>
+          <div class="card_button_block">
+            <button class="card_btn" data-translate-key="card_btn">
+              Детальніше
+            </button>
+          </div>
+        </div>
+
+        <div class="sevices_card_item">
+          <img class="card_image" src="img/repare128.png" alt="repare" loading="lazy" />
+          <h3 class="card_title" data-translate-key="card_repair">Hochwertige Autoreparaturen – zuverlässig und
+            professionell</h3>
+          <ul class="service_card_list">
+            <li data-translate-key="repair_first_li">
+              Усі види ремонтних робіт по двигуну, трансмісії та ходовій
+              частині.
+            </li>
+            <li data-translate-key="repair_second_li">
+              Замінa деталей та агрегатів (гальмівні системи, підвіска,
+              зчеплення).
+            </li>
+            <li data-translate-key="repair_third_li">
+              Виправлення кузовних пошкоджень та лакофарбових покриттів.
+            </li>
+          </ul>
+          <div class="card_button_block">
+            <button class="card_btn" data-translate-key="card_btn">
+              Детальніше
+            </button>
           </div>
         </div>
       </div>
-      <div class="main_header">
-        <div class="header_logo"></div>
-        <div class="header_nav">
-          <nav>
-            <a href="#top_header" class="header_nav_link" id="header_nav_main"
-            data-translate-key="header_main"
-              >Головна</a
-            >
-            <a href="#about" class="header_nav_link" id="header_nav_about"
-            data-translate-key="header_about"
-              >Про нас</a
-            >
-            <a
-              href="#services"
-              class="header_nav_link"
-              data-translate-key="header_services"
-              >Наші послуги</a
-            >
-            <a href="#clients" class="header_nav_link"
-            data-translate-key="header_reviews"
-              >Відгуки</a
-            >
-            <a href="#footer" class="header_nav_link"
-            data-translate-key="header_contacts"
-              >Контакти</a
-            >
-          </nav>
-          <div class="lang_switcher">
-            <select id="lang_select">
-              <option value="de">Deutsch</option>
-              <option value="en">English</option>
-              <option value="ua">Українська</option>
+
+      <!-- Modal Window -->
+      <div id="modal_window">
+        <form class="modal_form" method="POST">
+          <div class="modal_close_btn">
+            <span>X</span>
+          </div>
+          <div class="form-group">
+            <input name="name" type="text" placeholder="Введіть ваше ім’я..." required id="modal_name_input" />
+          </div>
+          <div class="form-group phone-group">
+            <input name="phone" class="input_phone" type="tel" value="+43" class="phone_input" required />
+          </div>
+          <div class="form-group">
+            <select name="car_make" id="car_make">
+              <option value="" disabled selected data-translate-key="modal_carbrand">
+                Оберіть марку авто...
+              </option>
+              <option value="toyota">Toyota</option>
+              <option value="volkswagen">Volkswagen</option>
+              <option value="ford">Ford</option>
+              <option value="honda">Honda</option>
+              <option value="bmw">BMW</option>
+              <option value="mercedes">Mercedes-Benz</option>
+              <option value="hyndai">Hyundai</option>
+              <option value="nissan">Nissan</option>
+              <option value="tesla">Tesla</option>
+              <option value="kia">Kia</option>
             </select>
           </div>
-        </div>
-      </div>
-    </header>
 
-    <!-- Burger -->
-    
-    <div class="burger-menu">
-      <div class="lang_switcher">
-        <select id="lang_select">
-          <option value="de">Deutsch</option>
-          <option value="en">English</option>
-          <option value="ua">Українська</option>
-        </select>
-      </div>
-      <div class="burger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav class="burger-nav" id="burgerNav">
-        <a href="#top_header" class="header_nav_link"
-        data-translate-key="header_main"
-          >Головна</a
-        >
-        <a href="#about" class="header_nav_link"
-        data-translate-key="header_about" 
-          >Про нас</a
-        >
-        <a href="#services" class="header_nav_link"
-        data-translate-key="header_services"
-          >Наші послуги</a
-        >
-        <a href="#clients" class="header_nav_link" 
-        data-translate-key="header_reviews" 
-          >Відгуки</a
-        >
-        <a href="#footer" class="header_nav_link" 
-        data-translate-key="header_contacts" 
-          >Контакти</a
-        >
-      </nav> 
-    </div>
-    
-    <!-- Intro -->
-    <div class="intro" id="intro">
-     
-      <div class="intro_video">
-        <video autoplay loop muted playsinline>
-          <source
-            src="img/introbg.mp4"
-          />
-        </video>
-      </div>
+          <div class="form-group" id="model_select">
+            <select name="car_model" id="car_model">
+              <option value="" disabled selected data-translate-key="modal_carmark">
+                Спочатку оберіть марку авто!
+              </option>
+            </select>
+          </div>
 
-      <div class="intro_content">
-        <h1 class="intro_content_title" data-translate-key="intro">
-          Professionelle Autowartung und Reparatur in Gleisdorf
-        </h1>
-        <a href="#feedback">
-          <button class="intro_content_button" data-translate-key="signService">
+          <h3 class="modal_form_title" data-translate-key="modal_services">
+            Послуги:
+          </h3>
+          <div class="modal_form_services">
+            <div class="modal_labels">
+              <label for="detailing_input">
+                <input name="detailing" id="detailing_input" type="checkbox" />
+                <span data-translate-key="modal_detailing">Детейлінг</span>
+              </label>
+
+              <label for="diagnostic_input">
+                <input name="diagnostic" id="diagnostic_input" type="checkbox" />
+                <span data-translate-key="modal_diagnostic">Діагностика</span>
+              </label>
+
+              <label for="electronics_input">
+                <input name="electrics" id="electronics_input" type="checkbox" />
+                <span data-translate-key="modal_electrics">Автоелектрика</span>
+              </label>
+
+              <label for="repare_input">
+                <input name="repair" id="repare_input" type="checkbox" />
+                <span data-translate-key="modal_repair">Ремонт</span>
+              </label>
+            </div>
+          </div>
+          <p id="result" data-translate-key="modal_total" name="total_price">Сума від: €0.00</p>
+          <div class="modal_politics_block">
+            <label class="politics_label"><input type="checkbox" required />
+              <span data-translate-key="accept">Я приймаю</span>
+              <a href="politics.html" class="politics_link" data-translate-key="politics">Політику
+                конфіденційності</a></label>
+          </div>
+
+          <button class="form_button" type="submit" data-translate-key="signService">
             Записатися на сервіс
           </button>
-        </a>
+        </form>
       </div>
     </div>
+  </div>
 
-    <!-- About -->
-    <div class="about" id="about">
-      <div class="container">
-        <div class="about_content">
-          <h2 class="about_title" data-translate-key="about_title">Про Нас</h2>
-
-          <div class="about_info">
-            <div class="about_image">
-              <img src="img/aboutimage.jpg" alt="about" />
-            </div>
-
-            <div class="about_text">
-              <p data-translate-key="about_first_text">
-                Автосервіс Тurboautoservice— це професійний догляд за вашим автомобілем. Ми спеціалізуємося на ремонтних і детейлінгових послугах, поєднуючи швидкість, якість і уважність до деталей.
-              </p>
-              <p class="about_why" data-translate-key="about_second_text">Чому ми?
-              </p>
-              <p data-translate-key="about_third_text">
-                Експертність: Досвідчені майстри забезпечують надійний сервіс із гарантією.
-              </p>
-              <p data-translate-key="about_fourth_text">Оперативність: Завдяки системі запису ваш автомобіль завжди готовий вчасно.</p>
-              <p data-translate-key="about_fiveth_text">Індивідуальний підхід: Ми дбаємо про кожну деталь, щоб ваше авто виглядало бездоганно.</p>
-              <p data-translate-key="about_fiveth_text">Обираючи Тurboautoservice, ви отримуєте більше, ніж просто сервіс — ви отримуєте надійність і турботу про ваше авто.</p>
-            </div>
+  <!-- Our Clients -->
+  <div class="clients" id="clients">
+    <div class="container">
+      <div class="clients_content">
+        <h2 class="clients_title" data-translate-key="clients_title">Наші Клієнти</h2>
+        <div class="reviews">
+          <div class="review_item">
+            <img class="review_item_img" src="img/client1.jpg" loading="lazy" width="200" height="200" alt="" />
+            <h3 class="review_item_name" data-translate-key="first_client_name">Андрій Кравчук (Україна)</h3>
+            <p class="review_item_description" data-translate-key="first_client_text">
+              Привозив авто на ремонт ходової частини. Все зробили на найвищому рівні, ще й запропонували безкоштовну
+              діагностику в майбутньому. Сервіс супер, персонал привітний, ціни адекватні!
+            </p>
           </div>
 
-          <div class="about_figures">
-            <span class="figure_item">
-              <p class="figure">1</p>
-              <span class="figure_text" 
-              data-translate-key="about_first_figure"
-                >Кваліфіковані спеціалісти завжди готові надати якісні послуги
-                нашим клієнтам з гарантією</span
-              >
-            </span>
+          <div class="review_item">
+            <img class="review_item_img" src="img/client2.jpg" loading="lazy" width="200" height="200" alt="" />
+            <h3 class="review_item_name" data-translate-key="second_client_name">Олексій Дорошенко (Україна)</h3>
+            <p class="review_item_description" data-translate-key="second_client_text">
+              Звертався в цей автосервіс на діагностику двигуна. Роботу виконали швидко, все детально пояснили. Дуже
+              сподобалася відповідальність майстрів та сучасне обладнання. Тепер тільки до вас! Рекомендую!
+            </p>
+          </div>
 
-            <span class="figure_item">
-              <p class="figure">2</p>
-              <span class="figure_text"
-              data-translate-key="about_second_figure"
-                >Кожного дня в нас працює контакт-центр для консультації та
-                записів наших клієнтів</span
-              >
-            </span>
+          <div class="review_item">
+            <img class="review_item_img" src="img/client3.jpg" loading="lazy" width="200" height="200" alt="" />
+            <h3 class="review_item_name" data-translate-key="third_client_name"> Йоган Келлер (Австрія)</h3>
+            <p class="review_item_description" data-translate-key="third_client_text">
+              Мені порадили цей сервіс друзі. Дуже задоволений високим рівнем обслуговування! Робив ремонт гальмівної
+              системи. Все виконали чітко і вчасно. Надійне місце, яке варто відвідати.
+            </p>
+          </div>
+        </div>
 
-            <span class="figure_item">
-              <p class="figure">3</p>
-              <span class="figure_text" 
-              data-translate-key="about_third_figure"
-                >Ми прагнемо оптимізувати процес покращення Вашого авто і надати
-                послуги високоякісно та швидко</span
-              >
-            </span>
+        <div class="review_counter">
+          <div class="counter_item">
+            <h2 class="counter_item_number" data-count="7514">0</h2>
+            <p class="counter_item_text" data-translate-key="projects">
+              Реалізованих проектів
+            </p>
+          </div>
+          <div class="counter_item">
+            <h2 class="counter_item_number" data-count="1030">0</h2>
+            <p class="counter_item_text" data-translate-key="polishings">
+              Кількість поліровок
+            </p>
+          </div>
+          <div class="counter_item">
+            <h2 class="counter_item_number" data-count="235">0</h2>
+            <p class="counter_item_text" data-translate-key="cleanings">
+              Кількість хімчисток
+            </p>
+          </div>
+          <div class="counter_item">
+            <h2 class="counter_item_number" data-count="5">0</h2>
+            <p class="counter_item_text" data-translate-key="studios">
+              Кількість студій
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Services -->
-    <div class="services" id="services">
-      <div class="container">
-        <h2 class="services_title" data-translate-key="services_title">Наші Послуги</h2>
-        <div class="services_cards">
-          <div class="sevices_card_item">
-            <div class="card_img_block">
-              <img
-                class="card_image"
-                src="img/detailing128.png"
-                alt="detailing" loading="lazy"
-              />
-            </div>
-
-            <h3 class="card_title" data-translate-key="card_detailing">Premium Car Detailing - Sauberkeit und Pflege für Ihr Auto</h3>
-            <ul class="service_card_list">
-              <li data-translate-key="detailing_first_li">
-                Глибоке очищення салону від пилу та бруду за допомогою
-                спеціалізованих засобів.
-              </li>
-              <li data-translate-key="detailing_second_li">
-                Захист і реставрація шкіряних та тканинних сидінь, а також інших
-                поверхонь.
-              </li>
-              <li data-translate-key="detailing_third_li">
-                Усунення неприємних запахів і дезінфекція для створення
-                комфортної атмосфери.
-              </li>
-            </ul>
-            <div class="card_button_block">
-              <button class="card_btn" data-translate-key="card_btn">
-                Детальніше
-              </button>
-            </div>
-          </div>
-
-          <div class="sevices_card_item">
-            <div class="card_img_block">
-              <img
-                class="card_image"
-                src="img/diagnostic128.png"
-                alt="diagnostic" loading="lazy"
-              />
-            </div>
-            <h3 class="card_title" data-translate-key="card_diagnostic">Präzise Autodiagnose - schnelles Erkennen von Fehlern</h3>
-            <ul class="service_card_list">
-              <li data-translate-key="diagnostic_first_li">
-                Комп'ютерна діагностика електронних систем автомобіля.
-              </li>
-              <li data-translate-key="diagnostic_second_li">
-                Перевірка роботи двигуна, трансмісії та інших ключових систем.
-              </li>
-              <li data-translate-key="diagnostic_third_li">
-                Визначення можливих несправностей та рекомендації щодо їх
-                усунення.
-              </li>
-            </ul>
-            <div class="card_button_block">
-              <button class="card_btn" data-translate-key="card_btn">
-                Детальніше
-              </button>
-            </div>
-          </div>
-
-          <div class="sevices_card_item">
-            <img
-              class="card_image"
-              src="img/electronics128.png"
-              alt="electronics" loading="lazy"
-            />
-            <h3 class="card_title" data-translate-key="card_electrics">
-              Zuverlässiger Fahrzeugelektrik-Service 
+  <!-- Feedback -->
+  <div class="feedback" id="feedback">
+    <div class="feedback_video_container">
+      <video autoplay loop muted playsinline>
+        <source src="img/feedbackbg.mp4" />
+      </video>
+    </div>
+    <div class="container">
+      <div class="feedback_content">
+        <div class="feedback_shedule">
+          <h3 class="shedule_title" data-translate-key="shedule_title">
+            Графік Роботи
+          </h3>
+          <p data-translate-key="monday">Пн 8:00 - 22:00</p>
+          <p data-translate-key="tuesday">Вт 8:00 - 22:00</p>
+          <p data-translate-key="wednesday">Ср 8:00 - 22:00</p>
+          <p data-translate-key="thursday">Чт 8:00 - 22:00</p>
+          <p data-translate-key="friday">Пт 8:00 - 22:00</p>
+          <p data-translate-key="weekend">Сб,Нд - По домовленості</p>
+        </div>
+        <div>
+          <form class="feedback_form">
+            <h3 class="form_title" data-translate-key="feedback_title">
+              Заповніть форму для зв’язку!
             </h3>
-            <ul class="service_card_list">
-              <li data-translate-key="electrics_first_li">
-                Ремонт та заміна електричних компонентів автомобіля
-                (акумулятори, стартери, генератори).
-              </li>
-              <li data-translate-key="electrics_second_li">
-                Виправлення проблем з освітленням, проводкою та електронними
-                системами.
-              </li>
-              <li data-translate-key="electrics_third_li">
-                Встановлення додаткових електронних пристроїв (сигналізацій,
-                парктроніків, мультимедійних систем).
-              </li>
-            </ul>
-            <div class="card_button_block">
-              <button class="card_btn" data-translate-key="card_btn">
-                Детальніше
-              </button>
-            </div>
-          </div>
-
-          <div class="sevices_card_item">
-            <img class="card_image" src="img/repare128.png" alt="repare" loading="lazy" />
-            <h3 class="card_title" data-translate-key="card_repair">Hochwertige Autoreparaturen – zuverlässig und professionell</h3>
-            <ul class="service_card_list">
-              <li data-translate-key="repair_first_li">
-                Усі види ремонтних робіт по двигуну, трансмісії та ходовій
-                частині.
-              </li>
-              <li data-translate-key="repair_second_li">
-                Замінa деталей та агрегатів (гальмівні системи, підвіска,
-                зчеплення).
-              </li>
-              <li data-translate-key="repair_third_li">
-                Виправлення кузовних пошкоджень та лакофарбових покриттів.
-              </li>
-            </ul>
-            <div class="card_button_block">
-              <button class="card_btn" data-translate-key="card_btn">
-                Детальніше
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal Window -->
-        <div id="modal_window">
-          <form  class="modal_form"  method="POST">
-            <div class="modal_close_btn">
-              <span>X</span>
-            </div>
             <div class="form-group">
-              <input name="name" type="text" placeholder="Введіть ваше ім’я..." required id="modal_name_input" />
+              <label>
+                <input name="name" type="text" placeholder="Введіть ваше ім’я..." required id="feedback_name_input" />
+              </label>
             </div>
             <div class="form-group phone-group">
-              <input
-              name="phone"
-                class="input_phone"
-                type="tel"
-                value="+43"
-                class="phone_input"
-                required
-              />
+              <input name="phone" class="input_phone" type="tel" value="+43" required />
             </div>
             <div class="form-group">
-              <select name="car_make" id="car_make" >
-                <option value="" disabled selected data-translate-key="modal_carbrand">
-                  Оберіть марку авто...
-                </option>
-                <option value="toyota">Toyota</option>
-                <option value="volkswagen">Volkswagen</option>
-                <option value="ford">Ford</option>
-                <option value="honda">Honda</option>
-                <option value="bmw">BMW</option>
-                <option value="mercedes">Mercedes-Benz</option>
-                <option value="hyndai">Hyundai</option>
-                <option value="nissan">Nissan</option>
-                <option value="tesla">Tesla</option>
-                <option value="kia">Kia</option>
-              </select>
+              <input name="car_name" type="text" placeholder="Введіть назву вашого авто..." id="car_name_input"
+                required />
             </div>
-
-            <div class="form-group" id="model_select">
-              <select name="car_model" id="car_model">
-                <option value="" disabled selected data-translate-key="modal_carmark">
-                  Спочатку оберіть марку авто!
-                </option>
-              </select>
+            <div>
+              <label class="politics_label"><input type="checkbox" required />
+                <span data-translate-key="accept"> Я приймаю </span>
+                <a href="politics.html" class="politics_link" data-translate-key="politics">Політику
+                  конфіденційності</a></label>
             </div>
-
-            <h3 class="modal_form_title" data-translate-key="modal_services">
-              Послуги:
-            </h3>
-            <div class="modal_form_services">
-              <div class="modal_labels">
-                <label for="detailing_input">
-                  <input name="detailing" id="detailing_input" type="checkbox" />
-                  <span data-translate-key="modal_detailing">Детейлінг</span>
-                </label>
-
-                <label for="diagnostic_input">
-                  <input name="diagnostic" id="diagnostic_input" type="checkbox" />
-                  <span data-translate-key="modal_diagnostic">Діагностика</span>
-                </label>
-
-                <label for="electronics_input">
-                  <input name="electrics" id="electronics_input" type="checkbox" />
-                  <span data-translate-key="modal_electrics">Автоелектрика</span>
-                </label>
-
-                <label for="repare_input">
-                  <input name="repair" id="repare_input" type="checkbox" />
-                  <span data-translate-key="modal_repair">Ремонт</span>
-                </label>
-              </div>
-            </div>
-            <p id="result" data-translate-key="modal_total" name="total_price">Сума від: €0.00</p>
-            <div class="modal_politics_block">
-              <label class="politics_label"
-                ><input type="checkbox" required />
-                <span data-translate-key="accept">Я приймаю</span>
-                <a
-                  href="politics.html"
-                  class="politics_link"
-                  data-translate-key="politics"
-                  >Політику конфіденційності</a
-                ></label
-              >
-            </div>
-
-            <button class="form_button" type="submit" data-translate-key="signService">
-              Записатися на сервіс
+            <button class="form_button" type="submit" data-translate-key="feedback_btn">
+              Отримати консультацію
             </button>
           </form>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Our Clients -->
-    <div class="clients" id="clients">
-      <div class="container">
-        <div class="clients_content">
-          <h2 class="clients_title" data-translate-key="clients_title">Наші Клієнти</h2>
-          <div class="reviews">
-            <div class="review_item">
-              <img
-                class="review_item_img"
-                src="img/client1.jpg"
-                loading="lazy"
-                width="200"
-                height="200"
-                alt=""
-              />
-              <h3 class="review_item_name" data-translate-key="first_client_name">Андрій Кравчук (Україна)</h3>
-              <p class="review_item_description" data-translate-key="first_client_text">
-                Привозив авто на ремонт ходової частини. Все зробили на найвищому рівні, ще й запропонували безкоштовну діагностику в майбутньому. Сервіс супер, персонал привітний, ціни адекватні!
-              </p>
+  <div class="works">
+    <div class="container">
+      <div class="works_content">
+        <h2 class="works_title" data-translate-key="works_title">Наші Роботи</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/work1.jpg" srcset="img/work1-500x300.jpg 500w, img/work1.jpg 1200w"
+                sizes="(max-width: 640px) 500px, 100vw" alt="work" />
             </div>
-
-            <div class="review_item">
-              <img
-                class="review_item_img"
-                src="img/client2.jpg"
-                loading="lazy"
-                width="200"
-                height="200"
-                alt=""
-              />
-              <h3 class="review_item_name" data-translate-key="second_client_name">Олексій Дорошенко (Україна)</h3>
-              <p class="review_item_description" data-translate-key="second_client_text">
-                Звертався в цей автосервіс на діагностику двигуна. Роботу виконали швидко, все детально пояснили. Дуже сподобалася відповідальність майстрів та сучасне обладнання. Тепер тільки до вас! Рекомендую!
-              </p>
+            <div class="swiper-slide">
+              <img src="img/work2.jpg" srcset="img/work2-500x300.jpg 500w, img/work2.jpg 1200w"
+                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
             </div>
-
-            <div class="review_item">
-              <img
-                class="review_item_img"
-                src="img/client3.jpg"
-                loading="lazy"
-                width="200"
-                height="200"
-                alt=""
-              />
-              <h3 class="review_item_name" data-translate-key="third_client_name"> Йоган Келлер (Австрія)</h3>
-              <p class="review_item_description" data-translate-key="third_client_text">
-                Мені порадили цей сервіс друзі. Дуже задоволений високим рівнем обслуговування! Робив ремонт гальмівної системи. Все виконали чітко і вчасно. Надійне місце, яке варто відвідати.
-              </p>
+            <div class="swiper-slide">
+              <img src="img/work3.jpg" srcset="img/work3-500x300.jpg 500w, img/work3.jpg 1200w"
+                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/work4.jpg" srcset="img/work4-500x300.jpg 500w, img/work4.jpg 1200w"
+                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/work5.jpg" srcset="img/work5-500x300.jpg 500w, img/work5.jpg 1200w"
+                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/work6.jpg" srcset="img/work6.jpg-500x300.jpg 500w, img/work6.jpg 1200w"
+                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/work7.jpg" srcset="img/work7.jpg-500x300.jpg 500w, img/work7.jpg 1200w"
+                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/work8.jpg" srcset="img/work8.jpg-500x300.jpg 500w, img/work8.jpg 1200w"
+                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
             </div>
           </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
 
-          <div class="review_counter">
-            <div class="counter_item">
-              <h2 class="counter_item_number" data-count="7514">0</h2>
-              <p class="counter_item_text" data-translate-key="projects">
-                Реалізованих проектів
-              </p>
-            </div>
-            <div class="counter_item">
-              <h2 class="counter_item_number" data-count="1030">0</h2>
-              <p class="counter_item_text" data-translate-key="polishings">
-                Кількість поліровок
-              </p>
-            </div>
-            <div class="counter_item">
-              <h2 class="counter_item_number" data-count="235">0</h2>
-              <p class="counter_item_text" data-translate-key="cleanings">
-                Кількість хімчисток
-              </p>
-            </div>
-            <div class="counter_item">
-              <h2 class="counter_item_number" data-count="5">0</h2>
-              <p class="counter_item_text" data-translate-key="studios">
-                Кількість студій
-              </p>
-            </div>
-          </div>
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Feedback -->
-    <div class="feedback" id="feedback">
-      <div class="feedback_video_container">
-        <video autoplay loop muted playsinline>
-          <source
-            src="img/feedbackbg.mp4"
-          />
-        </video>
+  <!--Google Calendar Appointment Schedule  -->
+  <section id="contacts" class="contact">
+    <div class="site-container">
+      <div class="contact_top">
+        <h2 class="second-title" data-translate-key="contact_subtitle">Haben Sie Fragen? Wir helfen
+          Ihnen gerne weiter!</h2>
       </div>
-      <div class="container">
-        <div class="feedback_content">
-          <div class="feedback_shedule">
-            <h3 class="shedule_title" data-translate-key="shedule_title">
-              Графік Роботи
-            </h3>
-            <p data-translate-key="monday">Пн 8:00 - 22:00</p>
-            <p data-translate-key="tuesday">Вт 8:00 - 22:00</p>
-            <p data-translate-key="wednesday">Ср 8:00 - 22:00</p>
-            <p data-translate-key="thursday">Чт 8:00 - 22:00</p>
-            <p data-translate-key="friday">Пт 8:00 - 22:00</p>
-            <p data-translate-key="weekend">Сб,Нд - По домовленості</p>
-          </div>
-          <div>
-            <form class="feedback_form">
-              <h3 class="form_title" data-translate-key="feedback_title">
-                Заповніть форму для зв’язку!
-              </h3>
-              <div class="form-group">
-                <label> 
-                <input
-                name="name"
-                  type="text"
-                  placeholder="Введіть ваше ім’я..."
-                  required
-                  id="feedback_name_input"
-                />
-              </label>
-              </div>
-              <div class="form-group phone-group">
-                <input name="phone" class="input_phone" type="tel" value="+43" required />
-              </div>
-              <div class="form-group">
-                <input
-                name="car_name"
-                  type="text"
-                  placeholder="Введіть назву вашого авто..."
-                  id="car_name_input"
-                  required
-                />
-              </div>
-              <div>
-                <label class="politics_label"
-                  ><input type="checkbox" required />
-                  <span data-translate-key="accept"> Я приймаю </span>
-                  <a
-                    href="politics.html"
-                    class="politics_link"
-                    data-translate-key="politics"
-                    >Політику конфіденційності</a
-                  ></label
-                >
-              </div>
-              <button
-                class="form_button"
-                type="submit"
-               data-translate-key="feedback_btn"
-              >
-                Отримати консультацію
-              </button>
-            </form>
-          </div>
+      <div id="calendar">
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <iframe
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2niEDvRpkxXDU5kLN3yB-RqsENAEG6eJzMPYIfy8NE2ewaFErcF80sJq0Ftt7CuSRzRh15CLLp?gv=true"
+          style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+        <!-- end Google Calendar Appointment Scheduling -->
+      </div>
+  
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer_content">
+        <div class="footer_address">
+          <h3 class="footer_title" data-translate-key="footer_address">Адреса</h3>
+          <a href="https://www.google.com/maps/dir//La%C3%9Fnitzthal+300,+8200+La%C3%9Fnitzthal,+%D0%90%D0%B2%D1%81%D1%82%D1%80%D0%B8%D1%8F/@47.0788412,15.6473568,17z/data=!4m18!1m8!3m7!1s0x476e4de11889771b:0x15a56e06f63a932d!2zTGHDn25pdHp0aGFsIDMwMCwgODIwMCBMYcOfbml0enRoYWwsINCQ0LLRgdGC0YDQuNGP!3b1!8m2!3d47.0788412!4d15.6473568!16s%2Fg%2F11c2g8hg69!4m8!1m0!1m5!1m1!1s0x476e4de11889771b:0x15a56e06f63a932d!2m2!1d15.6473568!2d47.0788412!3e3?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw&utm_source=footer&utm_medium=maps&utm_campaign=address"
+            target="_blank" class="footer_link">Gleisdorf, Laßnitzthal 300, 8200</a>
+          <a href="tel: +4367761977808" class="footer_link"><span data-translate-key="topheader_phone">Тел.:</span> +43
+            677 61977808</a>
+          <!-- Проверить номер тел +43 677 61977808 -->
+          <a href="mailto:info.autodienst.at@gmail.com?utm_source=footer&utm_medium=email&utm_campaign=contact"
+            target="_blank" class="footer_link"><span data-translate-key="topheader_email">Ел. пошта:</span>
+            info.autodienst.at@gmail.com</a>
         </div>
-      </div>
-    </div>
-
-    <div class="works">
-      <div class="container">
-        <div class="works_content">
-          <h2 class="works_title" data-translate-key="works_title">Наші Роботи</h2>
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="img/work1.jpg"
-                  srcset="img/work1-500x300.jpg 500w, img/work1.jpg 1200w"
-                  sizes="(max-width: 640px) 500px, 100vw"
-                  alt="work"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/work2.jpg" 
-                srcset="img/work2-500x300.jpg 500w, img/work2.jpg 1200w"
-                sizes="(max-width: 640px) 500px, 100vw"
-                alt="work" loading="lazy" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/work3.jpg" srcset="img/work3-500x300.jpg 500w, img/work3.jpg 1200w"
-                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/work4.jpg" srcset="img/work4-500x300.jpg 500w, img/work4.jpg 1200w"
-                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/work5.jpg" srcset="img/work5-500x300.jpg 500w, img/work5.jpg 1200w"
-                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/work6.jpg" srcset="img/work6.jpg-500x300.jpg 500w, img/work6.jpg 1200w"
-                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/work7.jpg" srcset="img/work7.jpg-500x300.jpg 500w, img/work7.jpg 1200w"
-                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
-              </div>
-              <div class="swiper-slide">
-                <img src="img/work8.jpg" srcset="img/work8.jpg-500x300.jpg 500w, img/work8.jpg 1200w"
-                sizes="(max-width: 640px) 500px, 100vw" alt="work" loading="lazy" />
-              </div>
-            </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-      <div class="container">
-        <div class="footer_content">
-          <div class="footer_address">
-            <h3 class="footer_title" data-translate-key="footer_address">Адреса</h3>
-            <a
-              href="https://www.google.com/maps/dir//La%C3%9Fnitzthal+300,+8200+La%C3%9Fnitzthal,+%D0%90%D0%B2%D1%81%D1%82%D1%80%D0%B8%D1%8F/@47.0788412,15.6473568,17z/data=!4m18!1m8!3m7!1s0x476e4de11889771b:0x15a56e06f63a932d!2zTGHDn25pdHp0aGFsIDMwMCwgODIwMCBMYcOfbml0enRoYWwsINCQ0LLRgdGC0YDQuNGP!3b1!8m2!3d47.0788412!4d15.6473568!16s%2Fg%2F11c2g8hg69!4m8!1m0!1m5!1m1!1s0x476e4de11889771b:0x15a56e06f63a932d!2m2!1d15.6473568!2d47.0788412!3e3?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw&utm_source=footer&utm_medium=maps&utm_campaign=address"
-              target="_blank"
-              class="footer_link"
-              >Gleisdorf, Laßnitzthal 300, 8200</a>
-            <a href="tel: +4367761977808" class="footer_link"
-              ><span data-translate-key="topheader_phone">Тел.:</span>  +43 677 61977808</a
-            >
-            <!-- Проверить номер тел +43 677 61977808 -->
-            <a
-              href="mailto:info.autodienst.at@gmail.com?utm_source=footer&utm_medium=email&utm_campaign=contact"
-              target="_blank"
-              class="footer_link"
-              ><span data-translate-key="topheader_email">Ел. пошта:</span> info.autodienst.at@gmail.com</a
-            >
-          </div>
-<div class="footer_flex_socials">
+        <div class="footer_flex_socials">
           <div class="footer_nav">
             <h3 class="footer_title" data-translate-key="footer_nav">Навігація</h3>
-            <a href="#top_header" class="footer_link" 
-            data-translate-key="header_main"
-              >Головна</a
-            >
-            <a href="#about" class="footer_link" 
-            data-translate-key="header_about"
-              >Про Нас</a
-            >
-            <a href="#services" class="footer_link"data-translate-key="header_services" 
-              >Наші Послуги</a
-            >
+            <a href="#top_header" class="footer_link" data-translate-key="header_main">Головна</a>
+            <a href="#about" class="footer_link" data-translate-key="header_about">Про Нас</a>
+            <a href="#services" class="footer_link" data-translate-key="header_services">Наші Послуги</a>
           </div>
           <div class="footer_socials">
             <h3 class="footer_title" data-translate-key="footer_socials">
               Наші соцмережі
             </h3>
-            <a
-              href="viber://chat?number=%2B436602430111&utm_source=footer&utm_medium=social&utm_campaign=viber"
-              target="_blank"
-              class="footer_link"
-              >Viber</a
-            >
-            <a
-              href="https://t.me/+436602430111?utm_source=footer&utm_medium=social&utm_campaign=telegram"
-              target="_blank"
-              class="footer_link"
-              >Telegram</a
-            >
-            <a
-              href="https://wa.me/436602430111?utm_source=footer&utm_medium=social&utm_campaign=whatsapp"
-              target="_blank"
-              class="footer_link"
-              >Whatsapp</a
-            >
+            <a href="viber://chat?number=%2B436602430111&utm_source=footer&utm_medium=social&utm_campaign=viber"
+              target="_blank" class="footer_link">Viber</a>
+            <a href="https://t.me/+436602430111?utm_source=footer&utm_medium=social&utm_campaign=telegram"
+              target="_blank" class="footer_link">Telegram</a>
+            <a href="https://wa.me/436602430111?utm_source=footer&utm_medium=social&utm_campaign=whatsapp"
+              target="_blank" class="footer_link">Whatsapp</a>
           </div>
-</div>
         </div>
       </div>
-    </footer>
-
-    <!-- Copyright -->
-    <div class="copyright">
-      <p class="copyright_text">
-        Copyright © 2025</p>
-        <a
-          href="politics.html"
-          class="politics_link"
-          data-translate-key="politics_privacy"
-          >Політика конфіденційності</a>
-      
     </div>
+  </footer>
+
+  <!-- Copyright -->
+  <div class="copyright">
+    <p class="copyright_text">
+      Copyright © 2025</p>
+    <a href="politics.html" class="politics_link" data-translate-key="politics_privacy">Політика конфіденційності</a>
+
+  </div>
 
 
 
 
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1071062520995467');
-  fbq('track', 'PageView');
-  fbq('track', 'ViewContent');
-  fbq('track', 'Lead');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-       src="https://www.facebook.com/tr?id=1071062520995467&ev=PageView&noscript=1" />
-</noscript>
-<!-- End Meta Pixel Code -->
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      }; if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1071062520995467');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+    fbq('track', 'Lead');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1071062520995467&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
-    <script type="text/javascript">
-      (function(c, l, a, r, i, t, y) {
-          c[a] = c[a] || function() { (c[a].q = c[a].q || []).push(arguments) };
-          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "p0f31py6en");
-    </script>
-    <script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "p0f31py6en");
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
