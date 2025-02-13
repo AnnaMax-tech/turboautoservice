@@ -43,7 +43,7 @@ function sendTelegram(name, phone, carMake, carModel, services, totalPrice) {
 
   const message = `
 Нова заявка:
-Назва сайту: Turbo Autroservice
+Назва сайту: Turbo Autroservice https://turbo.avtoinstallservis.site/
 Ім'я: ${name}
 Телефон: ${phone}
 Марка авто: ${carMake}
@@ -111,7 +111,7 @@ function sendEmail2(name, phone, carMake, carModel, services, totalPrice) {
       "site Annamax (Автосервіс в Австрії) https://turbo.avtoinstallservis.site/",
     message: `
 Нова заявка:
-Назва сайту: Turbo Autroservice
+Назва сайту: Turbo Autroservice https://turbo.avtoinstallservis.site/
 Ім'я: ${name}
 Телефон: ${phone}
 Марка авто: ${carMake}
