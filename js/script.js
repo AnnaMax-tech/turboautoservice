@@ -419,36 +419,68 @@ phoneInputs.forEach((input) => {
   itiInstances.push({ input, iti }); // Добавляем экземпляр в массив
 });
 
+// document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+//   link.addEventListener("click", (event) => {
+//     const url = new URL(link.href);
+//     const utmParams = new URLSearchParams(url.search);
+
+//     // Извлечение текущего массива из localStorage
+//     const clickedLinks =
+//       JSON.parse(localStorage.getItem("clicked_links")) || [];
+
+//     // Создаем объект с данными текущего нажатия
+//     const clickedData = {
+//       href: link.href,
+//       utm_source: utmParams.get("utm_source") || "Не указано",
+//       utm_medium: utmParams.get("utm_medium") || "Не указано",
+//       utm_campaign: utmParams.get("utm_campaign") || "Не указано",
+//       utm_content: utmParams.get("utm_content") || "Не указано",
+//       utm_term: utmParams.get("utm_term") || "Не указано",
+//       timestamp: new Date().toISOString(), // Время клика
+//     };
+
+//     // Добавляем новые данные в массив
+//     clickedLinks.push(clickedData);
+
+//     // Сохраняем обновленный массив в localStorage
+//     localStorage.setItem("clicked_links", JSON.stringify(clickedLinks));
+
+//     console.log("Данные о нажатии сохранены:", clickedData);
+//   });
+// });
+
 document.querySelectorAll('a[target="_blank"]').forEach((link) => {
   link.addEventListener("click", (event) => {
-    const url = new URL(link.href);
-    const utmParams = new URLSearchParams(url.search);
+      try {
+          const url = new URL(link.href);
+          const params = new URLSearchParams(url.search);
+          
+          // Создаем объект с данными клика
+          const clickedData = {
+              href: link.href,
+              utm_source: params.get('utm_source') || 'не указано',
+              utm_medium: params.get('utm_medium') || 'не указано',
+              utm_campaign: params.get('utm_campaign') || 'не указано',
+              utm_content: params.get('utm_content') || 'не указано',
+              utm_term: params.get('utm_term') || 'не указано',
+              timestamp: new Date().toISOString()
+          };
 
-    // Извлечение текущего массива из localStorage
-    const clickedLinks =
-      JSON.parse(localStorage.getItem("clicked_links")) || [];
-
-    // Создаем объект с данными текущего нажатия
-    const clickedData = {
-      href: link.href,
-      utm_source: utmParams.get("utm_source") || "Не указано",
-      utm_medium: utmParams.get("utm_medium") || "Не указано",
-      utm_campaign: utmParams.get("utm_campaign") || "Не указано",
-      utm_content: utmParams.get("utm_content") || "Не указано",
-      utm_term: utmParams.get("utm_term") || "Не указано",
-      timestamp: new Date().toISOString(), // Время клика
-    };
-
-    // Добавляем новые данные в массив
-    clickedLinks.push(clickedData);
-
-    // Сохраняем обновленный массив в localStorage
-    localStorage.setItem("clicked_links", JSON.stringify(clickedLinks));
-
-    console.log("Данные о нажатии сохранены:", clickedData);
+          // Получаем существующие данные
+          const clickedLinks = JSON.parse(localStorage.getItem("clicked_links")) || [];
+          
+          // Добавляем новые данные
+          clickedLinks.push(clickedData);
+          
+          // Сохраняем обновленный массив
+          localStorage.setItem("clicked_links", JSON.stringify(clickedLinks));
+          
+          console.log("Сохранены данные о клике:", clickedData);
+      } catch (error) {
+          console.error("Ошибка при сохранении данных о клике:", error);
+      }
   });
 });
-
 async function hashPhoneNumber(phoneNumber) {
   // Кодирование строки в байты
   const encoder = new TextEncoder();
@@ -769,6 +801,8 @@ modalForm.addEventListener("submit", async (e) => {
   // Параллельная отправка в Telegram и EmailJS
   try {
     // Отправка в Telegram через новую функцию sendTelegram
+    console.log('Отправка формы. UTM-метки в URL:', window.location.search);
+
     await sendTelegram(
       name,
       phoneInput.value,

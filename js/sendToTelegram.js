@@ -1,47 +1,144 @@
 // js\sendToTelegram.js
+// const DEBUG = true; // Флаг для режиму розробки
+
+// function getUTMParams() {
+//     if (DEBUG) {
+//         // Тестові UTM-мітки для локальної розробки
+//         return {
+//             utm_source: 'test_source',
+//             utm_medium: 'test_medium',
+//             utm_campaign: 'test_campaign',
+//             utm_content: 'test_content',
+//             utm_term: 'test_term'
+//         };
+//     }
+
+//     const params = new URLSearchParams(window.location.search);
+//     const utmData = {
+//         utm_source: params.get('utm_source') || 'direct',
+//         utm_medium: params.get('utm_medium') || 'none',
+//         utm_campaign: params.get('utm_campaign') || 'none',
+//         utm_content: params.get('utm_content') || 'none',
+//         utm_term: params.get('utm_term') || 'none'
+//     };
+    
+//     console.log("UTM-метки:", utmData);
+//     return utmData;
+// }
+
+
+
+
 console.log("Файл sendToTelegram.js загружен!");
 
-window.sendTelegram = sendTelegram;
-window.sendEmail2 = sendEmail2;
-console.log("Функции sendTelegram и sendEmail2 добавлены в window!");
 
 // Функція отримання UTM-міток з URL
 console.log(window.location.href);
+
 function getUTMParams() {
-  const params = new URLSearchParams(window.location.search);
-  const utmData = {
-    utm_source: params.get("utm_source") || "",
-    utm_medium: params.get("utm_medium") || "",
-    utm_campaign: params.get("utm_campaign") || "",
-    utm_content: params.get("utm_content") || "",
-    utm_term: params.get("utm_term") || "",
-  };
-  console.log("UTM-метки:", utmData);
-  console.log(params.toString());
-  return utmData;
+    console.group('getUTMParams execution');
+    console.log('Current URL:', window.location.href);
+    console.log('Search params:', window.location.search);
+
+    // Получаем параметры из URL
+    const params = new URLSearchParams(window.location.search);
+    console.log('Raw URL params:', Object.fromEntries(params.entries()));
+
+    // Получаем сохраненные UTM-метки из localStorage
+    const savedUtm = localStorage.getItem('current_utm');
+    console.log('Saved UTM from localStorage:', savedUtm);
+
+    // Создаем объект для UTM-меток
+    let utmData = {
+        utm_source: params.get('utm_source'),
+        utm_medium: params.get('utm_medium'),
+        utm_campaign: params.get('utm_campaign'),
+        utm_content: params.get('utm_content'),
+        utm_term: params.get('utm_term')
+    };
+
+    // Проверяем наличие UTM-меток в URL
+    const hasUtmInUrl = Object.values(utmData).some(value => value !== null && value !== '');
+    console.log('Has UTM in URL:', hasUtmInUrl);
+
+    if (hasUtmInUrl) {
+        // Если есть UTM-метки в URL, сохраняем их
+        localStorage.setItem('current_utm', JSON.stringify(utmData));
+        console.log('Saved new UTM to localStorage:', utmData);
+    } else if (savedUtm) {
+        // Если нет в URL, но есть в localStorage, используем сохраненные
+        try {
+            const parsed = JSON.parse(savedUtm);
+            utmData = parsed;
+            console.log('Using saved UTM from localStorage:', parsed);
+        } catch (e) {
+            console.error('Error parsing saved UTM:', e);
+        }
+    } else {
+        // Проверяем наличие информации о кликах
+        const clickedLinks = JSON.parse(localStorage.getItem("clicked_links")) || [];
+        console.log('Clicked links data:', clickedLinks);
+        
+        if (clickedLinks.length > 0) {
+            const lastClick = clickedLinks[clickedLinks.length - 1];
+            utmData = {
+                utm_source: lastClick.utm_source,
+                utm_medium: lastClick.utm_medium,
+                utm_campaign: lastClick.utm_campaign,
+                utm_content: lastClick.utm_content,
+                utm_term: lastClick.utm_term
+            };
+            console.log('Using UTM from last click:', utmData);
+        }
+    }
+
+    // Заполняем пустые значения
+    Object.keys(utmData).forEach(key => {
+        utmData[key] = utmData[key] || 'не указано';
+    });
+
+    console.log('Final UTM data:', utmData);
+    console.groupEnd();
+    return utmData;
 }
 
-console.log("Файл sendToTelegram.js подключен и работает!");
+// Функция для сохранения UTM-меток при первом посещении
+function saveInitialUtmParams() {
+    console.log('Saving initial UTM params');
+    const params = new URLSearchParams(window.location.search);
+    const utmData = {
+        utm_source: params.get('utm_source'),
+        utm_medium: params.get('utm_medium'),
+        utm_campaign: params.get('utm_campaign'),
+        utm_content: params.get('utm_content'),
+        utm_term: params.get('utm_term')
+    };
+
+    if (Object.values(utmData).some(value => value !== null && value !== '')) {
+        localStorage.setItem('current_utm', JSON.stringify(utmData));
+        console.log('Initial UTM params saved:', utmData);
+    }
+}
+
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    saveInitialUtmParams();
+});
 
 // Функція надсилання даних у Telegram
-function sendTelegram(name, phone, carMake, carModel, services, totalPrice) {
-  const utmParams = getUTMParams();
 
-  console.log("====== Отправка в Telegram ======");
-  console.log("Данные формы:", {
-    name,
-    phone,
-    carMake,
-    carModel,
-    services,
-    totalPrice,
-  });
-  console.log("UTM-метки:", utmParams);
 
-  const botToken = "8197764205:AAE-XbNUdeNg39ufCTNgo5wLMP_8lp75eXw";
-  const chatId = "-1002295760352";
 
-  const message = `
+// Обновленная функция отправки в Telegram
+async function sendTelegram(name, phone, carMake, carModel, services, totalPrice) {
+    console.group('sendTelegram execution');
+    const utmParams = getUTMParams();
+    console.log('UTM params for message:', utmParams);
+
+    const botToken = "8197764205:AAE-XbNUdeNg39ufCTNgo5wLMP_8lp75eXw";
+    const chatId = "-1002295760352";
+
+    const message = `
 Нова заявка:
 Назва сайту: Turbo Autroservice https://turbo.avtoinstallservis.site/
 Ім'я: ${name}
@@ -58,31 +155,36 @@ utm_campaign: ${utmParams.utm_campaign}
 utm_content: ${utmParams.utm_content}
 utm_term: ${utmParams.utm_term}`;
 
-console.log("Сообщение для отправки:", message);
+    console.log('Prepared message:', message);
 
-  return fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text: message }),
-  })
-    .then((response) => {
-      console.log("Сообщение успешно отправлено в Telegram!", response);
-      return response;
-    })
-    .then(data => {
-        console.log("Данные ответа:", data);
-        return data;
-    })
-    .catch((error) => {
-      console.error("Ошибка отправки в Telegram:", error);
-      throw error;
-    });
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_id: chatId, text: message })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log('Telegram API response:', result);
+        console.groupEnd();
+        return result;
+    } catch (error) {
+        console.error('Telegram send error:', error);
+        console.groupEnd();
+        throw error;
+    }
 }
 
-// Explicitly attach functions to window
+
+
+// Экспорт функций в глобальную область видимости
 window.sendTelegram = sendTelegram;
-window.sendEmail2 = sendEmail2;
 window.getUTMParams = getUTMParams;
+console.log("Функции sendTelegram и sendEmail2 добавлены в window!");
 
 // Add console log to verify script loading
 console.log("sendToTelegram.js loaded and functions attached to window!");
