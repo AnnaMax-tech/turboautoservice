@@ -1,3 +1,5 @@
+
+console.log('slider.js loaded!');
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",

@@ -1,4 +1,6 @@
 // Доступные языки и переводы
+console.log('translation.js loaded!');
+
 const translations = {
   site_title: {
     ua: "Turbo Autoservice : Діагностика, ремонт та електрика",

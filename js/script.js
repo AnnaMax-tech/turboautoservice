@@ -10,6 +10,8 @@ const modalResult = document.getElementById("result");
 const modalPhoneInput = document.querySelector(".input_phone");
 const lang = localStorage.getItem("selectedLang");
 
+console.log('script.js loaded');
+
 //Close Modal
 function closeModal() {
   const lang = localStorage.getItem("selectedLang");
@@ -607,23 +609,23 @@ feedbackForm.addEventListener("submit", async (e) => {
 
   try {
     // Отправка данных в Telegram
-    const telegramResponse = await fetch(
-      `https://api.telegram.org/bot${token}/sendMessage`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: message,
-        }),
-      }
-    );
+    // const telegramResponse = await fetch(
+    //   `https://api.telegram.org/bot${token}/sendMessage`,
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       chat_id: chatId,
+    //       text: message,
+    //     }),
+    //   }
+    // );
 
-    if (!telegramResponse.ok) {
-      throw new Error("Не удалось отправить сообщение в Telegram");
-    }
+    // if (!telegramResponse.ok) {
+    //   throw new Error("Не удалось отправить сообщение в Telegram");
+    // }
 
     // Отправка данных в EmailJS
     emailjs.init("izUn8c8DGbhnXBEc8"); // Инициализация EmailJS
@@ -766,24 +768,15 @@ modalForm.addEventListener("submit", async (e) => {
 
   // Параллельная отправка в Telegram и EmailJS
   try {
-    // Отправка в Telegram
-    const telegramResponse = await fetch(
-      `https://api.telegram.org/bot8197764205:AAE-XbNUdeNg39ufCTNgo5wLMP_8lp75eXw/sendMessage`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: "-1002295760352",
-          text: message,
-        }),
-      }
+    // Отправка в Telegram через новую функцию sendTelegram
+    await sendTelegram(
+      name,
+      phoneInput.value,
+      carMake,
+      carModel,
+      selectedServices.length > 0 ? selectedServices.join(", ") : "Не обрані",
+      totalPrice
     );
-
-    if (!telegramResponse.ok) {
-      throw new Error("Не удалось отправить сообщение в Telegram");
-    }
 
     // Отправка в EmailJS
     emailjs.init("izUn8c8DGbhnXBEc8"); // Инициализация EmailJS
@@ -830,9 +823,9 @@ modalForm.addEventListener("submit", async (e) => {
     ];
 
     const apiVersion = "v12.0";
-    const pixelId = "1071062520995467"; // Замените на ваш Pixel ID
+    const pixelId = "1071062520995467";
     const token =
-      "EAA2CZAuNcWIABO2teerfXDNZBl8JVBckLyweuI4I4hy528XsJXjE3dfNZCd64XROdKGRZBNQKx1FMcijLGr0AddqZARHid3kZA9psJP7VYWS6dTkZAAihJkRRZCBCtbRfP5REZCVqPGD4DqF3yvzBi3cHCs0AaDEU6X5nHWYa4pHxHhHN53ZAzQbDZBG7UAsD00Yr7ZAsQZDZD"; // Замените на ваш Access Token
+      "EAA2CZAuNcWIABO2teerfXDNZBl8JVBckLyweuI4I4hy528XsJXjE3dfNZCd64XROdKGRZBNQKx1FMcijLGr0AddqZARHid3kZA9psJP7VYWS6dTkZAAihJkRRZCBCtbRfP5REZCVqPGD4DqF3yvzBi3cHCs0AaDEU6X5nHWYa4pHxHhHN53ZAzQbDZBG7UAsD00Yr7ZAsQZDZD";
 
     await sendPostRequest(apiVersion, pixelId, token, eventData);
 
@@ -860,8 +853,3 @@ modalForm.addEventListener("submit", async (e) => {
     }).showToast();
   }
 });
-
-function toggleMenu() {
-  const nav = document.getElementById("burgerNav");
-  nav.style.display = nav.style.display === "block" ? "none" : "block";
-}
