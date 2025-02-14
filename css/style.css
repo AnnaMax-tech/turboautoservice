@@ -304,7 +304,7 @@ header {
 
 /* ABOUT */
 .about {
-  background: url(../img/aboutbg1.jpg) no-repeat;
+  background: url(../img/aboutbg1.webp) no-repeat;
   background-size: cover;
   padding: 100px 0;
   position: relative;
@@ -414,7 +414,7 @@ header {
 .services {
   position: relative;
   padding: 100px 0;
-  background: url(../img/servicesbg.jpg) no-repeat;
+  background: url(../img/servicesbg.webp) no-repeat;
   background-size: cover;
   z-index: 5;
 }
@@ -640,7 +640,7 @@ header {
 .clients {
   position: relative;
   padding: 100px 0;
-  background: url(../img/clientsbg.jpg) no-repeat;
+  background: url(../img/clientsbg.webp) no-repeat;
   background-size: cover;
   z-index: 4;
 }
@@ -858,7 +858,7 @@ input:focus {
 .works {
   position: relative;
   padding: 100px 0;
-  background: url(../img/worksbg.jpg) no-repeat;
+  background: url(../img/worksbg.webp) no-repeat;
   background-size: cover;
   z-index: 4;
 }
