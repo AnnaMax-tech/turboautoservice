@@ -25,14 +25,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+  
+  <!-- CSS styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/calendar.css" />
   <link rel="stylesheet" href="css/politics.css" />
   <link rel="icon" href="img/pageicon.webp" type="image/webp">
+  
+  <!-- SEO variations -->
+  <link rel="alternate" hreflang="de" href="https://turbo.avtoinstallservis.site/de/index.html" />
+  <link rel="alternate" hreflang="en" href="https://turbo.avtoinstallservis.site/en/index.html" />
+  <link rel="alternate" hreflang="ru" href="https://turbo.avtoinstallservis.site/ru/index.html" />
+  <link rel="alternate" hreflang="uk" href="https://turbo.avtoinstallservis.site/uk/index.html" />
+ 
+  <!-- JavaScripts -->
+  <script src="./js/lang-detector.js"></script>
   <script src="./js/translation.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="./js/slider.js" defer></script>
+
   <title data-translate-key="site_title">Turbo Autoservice : Diagnose, Reparatur und Elektrik</title>
 </head>
 
@@ -224,10 +236,11 @@
           <a href="#footer" class="header_nav_link" data-translate-key="header_contacts">Контакти</a>
         </nav>
         <div class="lang_switcher">
-          <select id="lang_select">
+          <select class="lang_select">
             <option value="de">Deutsch</option>
             <option value="en">English</option>
-            <option value="ua">Українська</option>
+            <option value="uk">Українська</option>
+            <option value="ru">Русский</option>
           </select>
         </div>
       </div>
@@ -238,10 +251,11 @@
 
   <div class="burger-menu">
     <div class="lang_switcher">
-      <select id="lang_select">
+      <select class="lang_select">
         <option value="de">Deutsch</option>
         <option value="en">English</option>
-        <option value="ua">Українська</option>
+        <option value="uk">Українська</option>
+        <option value="ru">Русский</option>
       </select>
     </div>
     <div class="burger-icon" onclick="toggleMenu()">
@@ -451,7 +465,7 @@
             <span>X</span>
           </div>
           <div class="form-group">
-            <input name="name" type="text" placeholder="Введіть ваше ім’я..." required id="modal_name_input" />
+            <input name="name" type="text" placeholder="Enter your name..." required id="modal_name_input" data-translate-key="placeholder_name" />
           </div>
           <div class="form-group phone-group">
             <input name="phone" class="input_phone" type="tel" value="+43" class="phone_input" required />
@@ -459,7 +473,7 @@
           <div class="form-group">
             <select name="car_make" id="car_make">
               <option value="" disabled selected data-translate-key="modal_carbrand">
-                Оберіть марку авто...
+                Select your car brand...
               </option>
               <option value="toyota">Toyota</option>
               <option value="volkswagen">Volkswagen</option>
@@ -615,14 +629,14 @@
             </h3>
             <div class="form-group">
               <label>
-                <input name="name" type="text" placeholder="Введіть ваше ім’я..." required id="feedback_name_input" />
+                <input name="name" type="text" placeholder="Введіть ваше ім’я..." data-translate-key="placeholder_name" required id="feedback_name_input" />
               </label>
             </div>
             <div class="form-group phone-group">
               <input name="phone" class="input_phone" type="tel" value="+43" required />
             </div>
             <div class="form-group">
-              <input name="car_name" type="text" placeholder="Введіть назву вашого авто..." id="car_name_input"
+              <input name="car_name" type="text" placeholder="Введіть назву вашого авто..." data-translate-key="car_name" id="car_name_input"
                 required />
             </div>
             <div>

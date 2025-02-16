@@ -955,6 +955,7 @@ input:focus {
   a{
     color: var(--primary-color);
     font-size: 15px;
+    text-align: right;
   }
 }
 
@@ -999,6 +1000,9 @@ input:focus {
 .footer_nav {
   display: flex;
   flex-direction: column;
+  a{
+    text-align: start;
+  }
 }
 
 .footer_title {
@@ -1008,6 +1012,10 @@ input:focus {
 .footer_socials {
   display: flex;
   flex-direction: column;
+  a{
+    text-align: start;
+  }
+  
 }
 
 .footer_link {
