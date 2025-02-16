@@ -419,36 +419,6 @@ phoneInputs.forEach((input) => {
   itiInstances.push({ input, iti }); // Добавляем экземпляр в массив
 });
 
-// document.querySelectorAll('a[target="_blank"]').forEach((link) => {
-//   link.addEventListener("click", (event) => {
-//     const url = new URL(link.href);
-//     const utmParams = new URLSearchParams(url.search);
-
-//     // Извлечение текущего массива из localStorage
-//     const clickedLinks =
-//       JSON.parse(localStorage.getItem("clicked_links")) || [];
-
-//     // Создаем объект с данными текущего нажатия
-//     const clickedData = {
-//       href: link.href,
-//       utm_source: utmParams.get("utm_source") || "Не указано",
-//       utm_medium: utmParams.get("utm_medium") || "Не указано",
-//       utm_campaign: utmParams.get("utm_campaign") || "Не указано",
-//       utm_content: utmParams.get("utm_content") || "Не указано",
-//       utm_term: utmParams.get("utm_term") || "Не указано",
-//       timestamp: new Date().toISOString(), // Время клика
-//     };
-
-//     // Добавляем новые данные в массив
-//     clickedLinks.push(clickedData);
-
-//     // Сохраняем обновленный массив в localStorage
-//     localStorage.setItem("clicked_links", JSON.stringify(clickedLinks));
-
-//     console.log("Данные о нажатии сохранены:", clickedData);
-//   });
-// });
-
 document.querySelectorAll('a[target="_blank"]').forEach((link) => {
   link.addEventListener("click", (event) => {
       try {
@@ -586,16 +556,19 @@ feedbackForm.addEventListener("submit", async (e) => {
       ua: "Будь ласка, заповніть всі поля і прийміть політику конфіденційності!",
       en: "Please fill in all fields and accept the privacy policy!",
       de: "Bitte füllen Sie alle Felder aus und akzeptieren Sie die Datenschutzrichtlinie!",
+      ru: "Пожалуйста, заполните все поля и примите политику конфиденциальности!",
     },
     invalidPhone: {
       ua: "Будь ласка, введіть дійсний номер телефону!",
       en: "Please enter a valid phone number!",
       de: "Bitte geben Sie eine gültige Telefonnummer ein!",
+      ru: "Пожалуйста, введите действительный номер телефона!",
     },
     success: {
       ua: "Дані успішно відправлені!",
       en: "Data has been successfully sent!",
       de: "Daten wurden erfolgreich gesendet!",
+      ru: "Данные успешно отправлены!",
     },
   };
 
@@ -640,25 +613,6 @@ feedbackForm.addEventListener("submit", async (e) => {
   const message = `Назва сайту: Turbo Autoservice\nФорма для консультації:\nІм'я: ${name}\nТелефон: ${phoneInput.value}\nАвтомобіль: ${car}`;
 
   try {
-    // Отправка данных в Telegram
-    // const telegramResponse = await fetch(
-    //   `https://api.telegram.org/bot${token}/sendMessage`,
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       chat_id: chatId,
-    //       text: message,
-    //     }),
-    //   }
-    // );
-
-    // if (!telegramResponse.ok) {
-    //   throw new Error("Не удалось отправить сообщение в Telegram");
-    // }
-
     // Отправка данных в EmailJS
     emailjs.init("izUn8c8DGbhnXBEc8"); // Инициализация EmailJS
     const emailResponse = await emailjs.send(
@@ -730,16 +684,19 @@ modalForm.addEventListener("submit", async (e) => {
       ua: "Будь ласка, заповніть всі поля і прийміть політику конфіденційності!",
       en: "Please fill in all fields and accept the privacy policy!",
       de: "Bitte füllen Sie alle Felder aus und akzeptieren Sie die Datenschutzrichtlinie!",
+      ru: "Пожалуйста, заполните все поля и примите политику конфиденциальности!",
     },
     invalidPhone: {
       ua: "Будь ласка, введіть дійсний номер телефону!",
       en: "Please enter a valid phone number!",
       de: "Bitte geben Sie eine gültige Telefonnummer ein!",
+      ru: "Пожалуйста, введите действительный номер телефона!",
     },
     success: {
       ua: "Дані успішно відправлені!",
       en: "Data has been successfully sent!",
       de: "Daten wurden erfolgreich gesendet!",
+      ru: "Данные успешно отправлены!",
     },
   };
 

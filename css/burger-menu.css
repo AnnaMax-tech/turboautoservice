@@ -1,0 +1,66 @@
+.burger-menu {
+    position: relative;
+    z-index: 1000;
+}
+
+.burger-icon {
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Анимация для превращения в крестик */
+.burger-icon.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.burger-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 80px 20px 20px;
+    transition: 0.3s;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.burger-nav.active {
+    right: 0;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Стили для ссылок в меню */
+.burger-nav .header_nav_link {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.burger-nav .header_nav_link:hover {
+    color: #666;
+}
