@@ -68,3 +68,14 @@
 .burger-nav .header_nav_link:hover {
     color: #666;
 }
+
+@media screen and (min-width: 768px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .burger-nav {
+        display: none;
+    }
+    
+}

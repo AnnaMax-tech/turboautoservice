@@ -14,5 +14,16 @@
     text-align: center;
     color:var( --primary-color);
     text-shadow: 2px 2px 6px #000;
+    max-width: 320px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px){
+    .second-title{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px #000;
+    max-width: 700px;
+    }
 }
 
