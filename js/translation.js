@@ -421,10 +421,10 @@ const translations = {
     ru: "Пт 8:00 - 22:00",
   },
   weekend: {
-    uk: "Сб,Нд - По домовленості",
-    en: "Sat, Sun - By appointment",
-    de: "Sa, So - Nach Vereinbarung",
-    ru: "Сб, Вс - По договоренности",
+    uk: "Сб, Нд - за домовленістю",
+    en: "Sat, Sun - by appointment",
+    de: "Sa, So - nach vereinbarung",
+    ru: "Сб, Вс - по договоренности",
   },
   feedback_title: {
     uk: "Заповніть форму для зв’язку!",
