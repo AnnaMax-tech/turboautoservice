@@ -32,8 +32,8 @@
 @media screen and (max-width: 445px) {
   .lang_switcher {
     position: absolute;
-    top: 100%;
-    right: 30%;
+    right: 200px;
+    top: -20px;
   }
 
   .oferta_list li {
