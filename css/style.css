@@ -5,6 +5,7 @@
   --upheader-title-color: #777;
   --upheader-subtitle-color: #444;
   --calendar-bg-color:#597687;
+  --transition-speed: 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
