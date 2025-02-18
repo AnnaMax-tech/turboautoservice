@@ -498,8 +498,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 30px;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -699,8 +699,8 @@ header {
 .feedback {
   /* background: url(); */
   position: relative;
-  padding: 300px 0;
-  z-index: 3;
+  padding: 100px 0;
+  /* z-index: 3; */
 }
 
 .feedback_video_container {
@@ -1361,7 +1361,7 @@ input:focus {
   }
 
   .feedback_content {
-    gap: 50px;
+    gap: 100px;
   }
 
   .feedback_form {
