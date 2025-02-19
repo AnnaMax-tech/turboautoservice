@@ -3,7 +3,7 @@ const CONFIG = {
     pixelId: '1071062520995467',
     businessId: '971574954805384',
     accessToken: 'EAA2CZAuNcWIABO3lBwWWmiffg4x2mOkXRWZC4ontg8653scwthAsBPZAzE6LfK9mI0slH5ftP9zo0tHd1cAtGo0M1vPkZCk4x5YySbsXro4ZArzk9ZAaS6O25GrATPXnJe3ddRaj43OFJD2wnZCZCaNCHw8NZCpBhJAP1qmwj4LnXXbklQ5PqIZCkH03a0VC6GhgGVZBwZDZD',
-    testEventCode: 'TEST72390', // ⚠️ Замените на ваш Test Event Code из Events Manager
+    testEventCode: 'TEST91552', // ⚠️ Замените на ваш Test Event Code из Events Manager
     apiVersion: 'v17.0'
 };
 

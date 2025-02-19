@@ -37,7 +37,7 @@ svg {
 }
 
 .container {
-  /* max-width: 1270px; */
+  max-width: 1270px;
   width: 100%;
   margin: 0 auto;
 }
@@ -392,6 +392,80 @@ header {
 }
 }
 
+@media screen and (min-width: 768px) {
+  .about_container{
+    max-width: 700px;
+    margin:0 auto;
+  }
+  .about_content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  .about_title{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px #000;
+  }
+  .about_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .about_image{
+    display:block;
+  }
+  .about_image img{
+    width: 333px;
+    height: 250px;
+  }
+
+  .about_text{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+  }
+  .about_text p{
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 2px 2px 6px #000;
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+  .about_first_text{
+    margin-bottom: 30px;
+  }
+  .about_why{
+    font-size: 20px !important;
+    text-align: center;
+  }
+  .about_figures{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+  }
+  .figure_item{
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .figure{
+    color: var(--icon-color);
+    font-weight: 700;
+    padding-right: 10px;
+    border-right: 2px solid var(--icon-color);
+    display: inline;
+    font-size: 3.5rem;
+  }
+  .figure_text{
+    font-size: 14px;
+    margin-right: 10px;
+    padding-left: 10px;
+  }
+}
 /* Serivces */
 
 .services {
@@ -429,11 +503,15 @@ header {
 }
 
 .sevices_card_item {
-  background-color: #fff;
-  border-radius: 20px;
-  border: 1px solid #1c2b39;
-  width: 23%;
-  height: 640px;
+  display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #fff;
+      border-radius: 20px;
+      border: 1px solid #1c2b39;
+      width: 23%;
+      height: 660px;
+      padding: 15px;
 }
 
 .card_image_block {
@@ -441,12 +519,11 @@ header {
 }
 
 .card_image {
-  max-width: 100%;
-  height: auto;
-  margin-left: 80px;
-  margin-top: 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+
+  
+  margin: 0 auto;
+  display: block;
+
 }
 
 .card_title {
@@ -457,23 +534,22 @@ header {
 }
 
 .service_card_list {
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .service_card_list li {
   padding: 10px;
-  margin-left: 30px;
-  list-style-type: disc;
+  /* margin-left: 30px; */
+  list-style: none  ;
+  /* list-style-type: disc; */
   color: #1c2b39;
 }
 
 .card_button_block {
   display: flex;
-  justify-content: center;
-  align-self: flex-end;
+      justify-content: center;
+      margin: auto auto;
+
 }
 
 .card_btn {
@@ -482,7 +558,7 @@ header {
   border: none;
   border-radius: 10px;
   padding: 20px 90px;
-  margin: 30px 60px;
+  
   cursor: pointer;
   transition: 0.3s ease-in;
 }
@@ -491,6 +567,44 @@ header {
   color: var(--button-color);
   background: #fff;
   border: 1px solid var(--button-color);
+}
+@media screen and (max-width:767px) {
+  .card_image {
+    margin: 0 auto;
+    display: block;
+}
+.sevices_card_item {
+  height:auto;
+  width: 90%;
+}
+.card_btn {
+  margin-top: 20px;
+}
+.card_image {
+  margin: 0 auto;
+  display: block;
+}
+
+}
+@media screen and (min-width:768px) {
+  .sevices_card_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #1c2b39;
+    width: 40%;
+    height: 660px;
+    padding: 15px;
+  }
+
+}
+@media screen and (min-width:1200px) {
+  .sevices_card_item {
+    width: 23%;
+   }
+
 }
 
 /* MODAL WINDOW */
@@ -661,9 +775,12 @@ header {
   justify-content: space-around;
 }
 
-@media screen and (max-width: 552px) {
+.review_item {
+  max-width: 300px;
+}
+@media screen and (min-width: 768px) {
   .review_item {
-    max-width: 300px;
+    max-width: 600px;
   }
   }
 
@@ -805,6 +922,9 @@ input:focus {
   align-items: center;
   gap: 5px;
 }
+.iti{
+  width: 100%;
+}
 
 .phone-group .flag-icon img {
   border-radius: 2px;
@@ -835,6 +955,58 @@ input:focus {
 
 .iti__country-name {
   color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .feedback {
+    padding: 50px 0;
+  }
+  .feedback_content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .feedback_form {
+    width: 300px;
+  }
+  .form-group input {
+    width: 100%;
+  }
+  .phone-group {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .form_button {
+    padding: 10px 20px;
+  }
+  .feedback_shedule {
+    padding: 20px;
+    margin: 0;
+  }
+  .shedule_title {
+    font-size: 32px;
+  }
+  .feedback_shedule p {
+    font-size: 24px;
+  }
+  
+}
+
+@media  screen and (min-width:1400px) {
+  .container{
+    max-width: 1270px;
+    margin: 0 auto; 
+  }
+  .feedback_content {
+    gap:250px;
+  }
+  .feedback_form {
+    width: 400px;
+  }
+  .iti{
+    width: 100%;
+  }
 }
 
 /* Works */
@@ -1112,16 +1284,16 @@ input:focus {
     justify-content: center;
   }
 
-  .sevices_card_item {
+  /* .sevices_card_item {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 33%;
-  }
+  } */
 
-  .card_image {
+  /* .card_image {
     margin-left: 0;
-  }
+  } */
 
   .card_button_block {
     align-self: center;
@@ -1131,10 +1303,10 @@ input:focus {
     font-size: 12px;
   } */
 
-  .about_image img {
+  /* .about_image img {
     width: 400px;
     height: 300px;
-  }
+  } */
 
   /* .figure_text {
     font-size: 12px;
@@ -1232,10 +1404,10 @@ input:focus {
     gap: 50px;
   }
 
-  .about_image img {
+  /* .about_image img {
     width: 300px;
     height: 200px;
-  }
+  } */
 
   /* .about_text p {
     font-size: 10px;
@@ -1263,17 +1435,17 @@ input:focus {
     font-size: 20px;
   }
 
-  .sevices_card_item {
+  /* .sevices_card_item {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 70%;
-  }
+  } */
 
-  .card_btn {
+  /* .card_btn {
     padding: 30px 90px;
     margin: 50px;
-  }
+  } */
 
   .reviews {
     display: flex;
@@ -1529,10 +1701,10 @@ input:focus {
     max-width: 370px;
   } */
 
-  .card_btn {
+  /* .card_btn {
     padding: 20px 60px;
     margin-top: 80px;
-  }
+  } */
 
   .review_counter {
     gap: 10px;

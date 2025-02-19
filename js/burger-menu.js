@@ -1,5 +1,3 @@
-console.log("burger-menu.js is loaded")
-
 document.addEventListener('DOMContentLoaded', () => {
     // Получаем необходимые элементы
     const burgerIcon = document.querySelector('.burger-icon');

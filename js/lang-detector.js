@@ -1,7 +1,7 @@
 // js/lang-detector.js
 (function() {
     const SUPPORTED_LANGUAGES = ['de', 'en', 'ru', 'uk'];
-    const DEFAULT_LANGUAGE = 'en';
+    const DEFAULT_LANGUAGE = 'de';
 
     const urlParams = new URLSearchParams(window.location.search);
     let urlLang = urlParams.get('lang');
