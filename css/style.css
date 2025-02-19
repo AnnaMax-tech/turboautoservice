@@ -613,7 +613,7 @@ header {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 30px;
+  top: 430px;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -622,6 +622,16 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+@media screen and (min-width: 767px) {
+  #modal_window {
+    top: 520px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #modal_window {
+    top: 150px;
+  }
 }
 
 #modal_window.active {
