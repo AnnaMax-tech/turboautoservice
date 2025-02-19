@@ -9,7 +9,7 @@
     cursor: pointer;
     z-index: 1001;
     position: absolute;
-    left: -30px;
+    left: 120px;
 }
 
 .burger-icon span {

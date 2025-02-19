@@ -100,7 +100,7 @@ header {
   padding: 20px 0 20px 0;
 }
 
-.lang_switcher {
+/* .lang_switcher {
   position: absolute;
   right: 1%;
   background-color: #f9f9f9;
@@ -108,9 +108,9 @@ header {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
-}
+} */
 
-.lang_switcher select {
+/* .lang_switcher select {
   border: none;
   background: none;
   font-size: 16px;
@@ -122,7 +122,7 @@ header {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-}
+} */
 
 .header_nav {
   display: flex;
@@ -474,9 +474,7 @@ header {
 .about_content{
   gap: 150px;
 }
-.about_title{
 
-}
 .about_info{
   gap: 100px;
 }
@@ -1441,9 +1439,9 @@ input:focus {
     right: 1%;
   } */
 
-  .lang_switcher select {
+  /* .lang_switcher select {
     padding: 0px 30px 0px 5px;
-  }
+  } */
 
   .intro_content_title {
     font-size: 24px;
@@ -1542,13 +1540,13 @@ input:focus {
     width: 300px;
   }
 
-  .lang_switcher {
+  /* .lang_switcher {
     border: 2px solid #000;
     position: absolute;
     top: 0;
     right: 220px;
     z-index: 100;
-  }
+  } */
 
   .burger-nav {
     width: 600px;
@@ -1559,9 +1557,9 @@ input:focus {
     margin-bottom: 20px;
   }
 
-  .lang_switcher select {
+  /* .lang_switcher select {
     padding: 10px 40px 10px 10px;
-  }
+  } */
 }
 
 @media screen and (max-width: 640px) {
@@ -1770,11 +1768,11 @@ input:focus {
     height: 200px;
   }
 
-  .lang_switcher {
+  /* .lang_switcher {
     position: absolute;
     top: 0;
     right: 100px;
-  }
+  } */
 }
 
 @media (hover: hover) {
