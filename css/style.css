@@ -466,6 +466,44 @@ header {
     padding-left: 10px;
   }
 }
+@media screen and (min-width: 1200px){
+.about_container{
+  max-width: 1270px;
+  margin: 0 auto;
+}
+.about_content{
+  gap: 150px;
+}
+.about_title{
+
+}
+.about_info{
+  gap: 100px;
+}
+
+.about_image img {
+  width: 600px;
+  height: 400px;
+}
+.about_text p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.about_text p:first-child {
+  margin-bottom: 40px;
+}
+.about_why {
+  font-size: 25px;
+}
+
+.figure_text{
+  font-size: 18px;
+  margin-right: 20px;
+  padding-left: 20px;
+}
+
+}
+
 /* Serivces */
 
 .services {
@@ -613,7 +651,7 @@ header {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 430px;
+  top: 30px;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -1007,6 +1045,9 @@ input:focus {
   .container{
     max-width: 1270px;
     margin: 0 auto; 
+  }
+  .feedback{
+    padding: 200px 0;
   }
   .feedback_content {
     gap:250px;
