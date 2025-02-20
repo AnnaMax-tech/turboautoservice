@@ -25,7 +25,8 @@ async function sendToCapi(eventName, eventId) {
     const userData = {
         client_user_agent: navigator.userAgent,
         client_ip_address: null,
-        event_source_url: window.location.href
+        event_source_url: window.location.href,
+        domain: window.location.hostname
     };
 
     const eventData = {
@@ -37,29 +38,30 @@ async function sendToCapi(eventName, eventId) {
             action_source: 'website',
             user_data: userData
         }],
-        test_event_code: CONFIG.testEventCode,
-        partner_agent: 'manual-pixel-js'
+        test_event_code: CONFIG.testEventCode
     };
 
     try {
         const response = await fetch(
-            `https://graph.facebook.com/${CONFIG.apiVersion}/${CONFIG.businessId}/events`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${CONFIG.accessToken}`
-            },
-            body: JSON.stringify(eventData)
-        });
+            `https://graph.facebook.com/${CONFIG.apiVersion}/${CONFIG.businessId}/events`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${CONFIG.accessToken}`
+                },
+                body: JSON.stringify(eventData)
+            }
+        );
         
         const result = await response.json();
-        if (result.error) {
-            console.error(`CAPI Error for ${eventName}:`, result.error);
-        } else {
-            console.log(`CAPI ${eventName} success:`, result);
+        console.log(`CAPI Response for ${eventName}:`, result);
+        
+        if (!response.ok) {
+            throw new Error(result.error?.message || 'Unknown error');
         }
     } catch (error) {
-        console.error(`CAPI ${eventName} failed:`, error);
+        console.error(`CAPI Error for ${eventName}:`, error);
     }
 }
 
