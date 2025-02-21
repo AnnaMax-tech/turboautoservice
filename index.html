@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
- 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <meta name="description"
@@ -25,20 +25,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
-  
+
   <!-- CSS styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/burger-menu.css">
   <link rel="stylesheet" href="css/calendar.css" />
   <link rel="stylesheet" href="css/politics.css" />
   <link rel="icon" href="img/pageicon.webp" type="image/webp">
-  
+
   <!-- SEO variations -->
   <link rel="alternate" hreflang="de" href="https://turbo.avtoinstallservis.site/de/index.html" />
   <link rel="alternate" hreflang="en" href="https://turbo.avtoinstallservis.site/en/index.html" />
   <link rel="alternate" hreflang="ru" href="https://turbo.avtoinstallservis.site/ru/index.html" />
   <link rel="alternate" hreflang="uk" href="https://turbo.avtoinstallservis.site/uk/index.html" />
- 
+
   <!-- JavaScripts -->
   <script src="./js/lang-detector.js"></script>
   <script src="./js/translation.js" defer></script>
@@ -51,8 +51,8 @@
 
 <body>
   <!-- SVG Sprites START -->
-  <svg display="none">
-    <symbol id="phone" viewBox="0 0 24 24">
+  <svg >
+    <!-- <symbol id="phone" viewBox="0 0 24 24">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
       <g id="SVGRepo_iconCarrier">
@@ -76,7 +76,7 @@
           d="M3.37892 10.2236L8 16L12.6211 10.2236C13.5137 9.10788 14 7.72154 14 6.29266V6C14 2.68629 11.3137 0 8 0C4.68629 0 2 2.68629 2 6V6.29266C2 7.72154 2.4863 9.10788 3.37892 10.2236ZM8 8C9.10457 8 10 7.10457 10 6C10 4.89543 9.10457 4 8 4C6.89543 4 6 4.89543 6 6C6 7.10457 6.89543 8 8 8Z"
           fill="#DD3751"></path>
       </g>
-    </symbol>
+    </symbol> -->
 
     <symbol id="mail" viewBox="0 -3.5 32 32">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -154,7 +154,7 @@
         <div class="top_header_content">
           <span class="top_header_icon">
             <svg>
-              <use xlink:href="#phone"></use>
+              <use href="img/sprite.svg#phone"></use>
             </svg>
             <div class="top_header_icon_text">
               <h4 class="top_header_icon_title" data-translate-key="topheader_phone">Телефон</h4>
@@ -164,7 +164,7 @@
 
           <span class="top_header_icon">
             <svg>
-              <use xlink:href="#map"></use>
+              <use href="img/sprite.svg#map"></use>
             </svg>
             <div class="top_header_icon_text">
               <a href="https://www.google.com/maps/dir//La%C3%9Fnitzthal+300,+8200+La%C3%9Fnitzthal,+%D0%90%D0%B2%D1%81%D1%82%D1%80%D0%B8%D1%8F/@47.0788412,15.6473568,17z/data=!4m18!1m8!3m7!1s0x476e4de11889771b:0x15a56e06f63a932d!2zTGHDn25pdHp0aGFsIDMwMCwgODIwMCBMYcOfbml0enRoYWwsINCQ0LLRgdGC0YDQuNGP!3b1!8m2!3d47.0788412!4d15.6473568!16s%2Fg%2F11c2g8hg69!4m8!1m0!1m5!1m1!1s0x476e4de11889771b:0x15a56e06f63a932d!2m2!1d15.6473568!2d47.0788412!3e3?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw&utm_source=header&utm_medium=maps&utm_campaign=address"
@@ -178,8 +178,8 @@
           </span>
 
           <span class="top_header_icon">
-            <svg>
-              <use xlink:href="#mail"></use>
+            <svg width="24" height="24">
+              <use xlink:href="#mail" style="fill: currentColor;"></use>
             </svg>
             <div class="top_header_icon_text">
               <h4 class="top_header_icon_title" data-translate-key="topheader_email">
@@ -247,7 +247,7 @@
       </div>
     </div>
   </header>
- 
+
   <!-- Burger -->
 
   <div class="burger-menu">
@@ -264,7 +264,7 @@
       <span></span>
       <span></span>
       <span></span>
-  </div>
+    </div>
     <nav class="burger-nav" id="burgerNav">
       <a href="#top_header" class="header_nav_link" data-translate-key="header_main">Головна</a>
       <a href="#about" class="header_nav_link" data-translate-key="header_about">Про нас</a>
@@ -316,11 +316,14 @@
             <p class="about_text_descr" data-translate-key="about_third_text">
               Експертність: Досвідчені майстри забезпечують надійний сервіс із гарантією.
             </p>
-            <p class="about_text_descr" data-translate-key="about_fourth_text">Оперативність: Завдяки системі запису ваш автомобіль завжди
+            <p class="about_text_descr" data-translate-key="about_fourth_text">Оперативність: Завдяки системі запису ваш
+              автомобіль завжди
               готовий вчасно.</p>
-            <p class="about_text_descr" data-translate-key="about_fiveth_text">Індивідуальний підхід: Ми дбаємо про кожну деталь, щоб ваше авто
+            <p class="about_text_descr" data-translate-key="about_fiveth_text">Індивідуальний підхід: Ми дбаємо про
+              кожну деталь, щоб ваше авто
               виглядало бездоганно.</p>
-            <p class="about_text_descr" data-translate-key="about_fiveth_text">Обираючи Тurboautoservice, ви отримуєте більше, ніж просто сервіс
+            <p class="about_text_descr" data-translate-key="about_fiveth_text">Обираючи Тurboautoservice, ви отримуєте
+              більше, ніж просто сервіс
               — ви отримуєте надійність і турботу про ваше авто.</p>
           </div>
         </div>
@@ -464,14 +467,13 @@
       <div id="modal_window">
         <form class="modal_form" method="POST">
           <div class="modal_close_btn">
-       
             <svg width="28" height="28" class="modal-close-btn-icon">
               <use href="img/sprite.svg#icon-x-close"></use>
             </svg>
-          
           </div>
           <div class="form-group">
-            <input name="name" type="text" placeholder="Enter your name..." required id="modal_name_input" data-translate-key="placeholder_name" />
+            <input name="name" type="text" placeholder="Enter your name..." required id="modal_name_input"
+              data-translate-key="placeholder_name" />
           </div>
           <div class="form-group phone-group">
             <input name="phone" class="input_phone" type="tel" value="+43" class="phone_input" required />
@@ -635,15 +637,16 @@
             </h3>
             <div class="form-group">
               <label>
-                <input name="name" type="text" placeholder="Введіть ваше ім’я..." data-translate-key="placeholder_name" required id="feedback_name_input" />
+                <input name="name" type="text" placeholder="Введіть ваше ім’я..." data-translate-key="placeholder_name"
+                  required id="feedback_name_input" />
               </label>
             </div>
             <div class="form-group phone-group">
               <input name="phone" class="input_phone" type="tel" value="+43" required />
             </div>
             <div class="form-group">
-              <input name="car_name" type="text" placeholder="Введіть назву вашого авто..." data-translate-key="car_name" id="car_name_input"
-                required />
+              <input name="car_name" type="text" placeholder="Введіть назву вашого авто..."
+                data-translate-key="car_name" id="car_name_input" required />
             </div>
             <div>
               <label class="politics_label"><input type="checkbox" required />
@@ -763,6 +766,46 @@
           </div>
         </div>
       </div>
+      <div class="footer_social-icons">
+        <ul class="social-icons">
+          <li>
+            <a class="footer-socials-link" href="https://www.facebook.com/people/Turbo-Autoservis/61568679512155/"
+              target="_blank" rel="noopener noreferer" aria-label="link to facebook">
+              <svg width="32" height="32" class="social-fb">
+                <use href="img/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="footer-socials-link" href="https://www.youtube.com/@turboautoservice" target="_blank"
+              rel="noopener noreferer" aria-label="link to youtube">
+              <svg width="32" height="32" class="social-youtube">
+                <use href="img/symbol-defs.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="footer-socials-link"
+              href="https://www.tiktok.com/@turboautoservice.at?is_from_webapp=1&sender_device=pc" target="_blank"
+              rel="noopener noreferer" aria-label="link to tiktok">
+              <svg width="32" height="32" class="social-tiktok">
+                <use href="img/symbol-defs.svg#icon-tiktok"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="footer-socials-link" href="https://www.instagram.com/turboautoservice/" target="_blank"
+              rel="noopener noreferer" aria-label="link to instagram">
+              <svg width="32" height="32" class="social-instagram">
+                <use href="img/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </footer>
 
@@ -775,11 +818,11 @@
   </div>
 
 
-<!-- Meta pixel -->
+  <!-- Meta pixel -->
   <script src="js/meta-pixel.js" defer></script>
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1071062520995467&ev=PageView&noscript=1"/>
+      src="https://www.facebook.com/tr?id=1071062520995467&ev=PageView&noscript=1" />
   </noscript>
   <!-- end of Meta pixel -->
 
@@ -793,9 +836,9 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-   <!-- Load sendToTelegram.js first -->
+  <!-- Load sendToTelegram.js first -->
   <script src="./js/sendToTelegram.js"></script>
-   <!-- Then load script.js -->
+  <!-- Then load script.js -->
   <script src="./js/script.js"></script>
   <script src="js/burger-menu.js"></script>
 </body>
