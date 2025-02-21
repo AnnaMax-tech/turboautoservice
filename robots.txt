@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /oferta.html
+Disallow: /politics.html
+Disallow: /README.md
+Disallow: /.gitignore
+Disallow: /.env
+
+
+Sitemap: https://turbo.avtoinstallservis.site/sitemap.xml
