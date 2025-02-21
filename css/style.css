@@ -1618,7 +1618,7 @@ input:focus {
   transition: transform 0.3s ease;
 }
 .social-icons > li > a > svg:hover {
-  transform: scale(1.3);
+  transform: scale(1.4);
   cursor: pointer;
 }
 /* Facebook */
