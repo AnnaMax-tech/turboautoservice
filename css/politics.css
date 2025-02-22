@@ -41,7 +41,9 @@
 	position: relative;
   width: 150px;
 }
-
+.lang_select_polytics{
+  top: 40px;
+}
 .lang_switcher select {
   position: absolute;
     right: 180px;
@@ -78,6 +80,10 @@
 	height: 12px;
 	background-color: #000000;
 	clip-path: polygon(8% 17%, 0% 25%, 50% 84%, 100% 25%, 92% 17%, 50% 65%);
+}
+
+.lang_switcher_polytics::after{
+  top:60px;
 }
 
 @media screen and (min-width: 678px) {

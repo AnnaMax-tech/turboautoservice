@@ -7,5 +7,5 @@ Disallow: /README.md
 Disallow: /.gitignore
 Disallow: /.env
 
-
+Allow: /
 Sitemap: https://turbo.avtoinstallservis.site/sitemap.xml

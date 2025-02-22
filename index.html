@@ -5,11 +5,17 @@
   <meta charset="UTF-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!-- Main language for the entire site -->
+<link rel="alternate" hreflang="x-default" href="https://turbo.avtoinstallservis.site/?lang=de" />
+
+<!-- Meta-tags for search engines -->
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Autoservice Österreich, Autoreparatur, KFZ-Werkstatt" />
 
   <meta name="description"
     content="Professional car service in Austria: repair and maintenance of all car brands. Quality, reliability, and modern technology. Book your appointment today!" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://autoserviceavstia.com" />
+  <meta property="og:url" content="turbo.avtoinstallservis.site" />
   <meta property="og:title" content="The best auto service in Austria" />
   <meta property="og:description"
     content="Professional car service in Austria: repair and maintenance of all car brands. Quality, reliability, and modern technology. Book your appointment today!" />
@@ -152,8 +158,8 @@
   <header>
     <div class="top_header" id="top_header">
       <div class="container">
-        <div class="top_header_content">
-          <span class="top_header_icon">
+        <ul class="top_header_content" aria-label="Contact information">
+          <li class="top_header_icon">
             <svg>
               <use href="img/sprite.svg#phone"></use>
             </svg>
@@ -161,9 +167,9 @@
               <h4 class="top_header_icon_title" data-translate-key="topheader_phone">Телефон</h4>
               <a href="tel:+436602430111" class="top_header_icon_subtitle"> +43 677 61977808</a>
             </div>
-          </span>
+          </li>
 
-          <span class="top_header_icon">
+          <li class="top_header_icon">
             <svg>
               <use href="img/sprite.svg#map"></use>
             </svg>
@@ -176,9 +182,9 @@
                 </p>
               </a>
             </div>
-          </span>
+          </li>
 
-          <span class="top_header_icon">
+          <li class="top_header_icon">
             <svg width="24" height="24">
               <use xlink:href="#mail" style="fill: currentColor;"></use>
             </svg>
@@ -189,9 +195,9 @@
               <a href="mailto:info.autodienst.at@gmail.com?utm_source=header&utm_medium=email&utm_campaign=contact"
                 class="top_header_icon_subtitle">info.autodienst.at@gmail.com</a>
             </div>
-          </span>
+          </li>
 
-          <span class="top_header_icon">
+          <li class="top_header_icon">
             <svg>
               <use xlink:href="#viber"></use>
             </svg>
@@ -200,9 +206,9 @@
               <a href="viber://chat?number=%2B436602430111&utm_source=header&utm_medium=social&utm_campaign=viber"
                 class="top_header_icon_subtitle" target="_blank" data-translate-key="topheader_contact">Contact</a>
             </div>
-          </span>
+          </li>
 
-          <span class="top_header_icon">
+          <li class="top_header_icon">
             <svg>
               <use xlink:href="#telegram"></use>
             </svg>
@@ -211,9 +217,9 @@
               <a href="https://t.me/+436602430111?utm_source=header&utm_medium=social&utm_campaign=telegram"
                 class="top_header_icon_subtitle" target="_blank" data-translate-key="topheader_contact">Contact</a>
             </div>
-          </span>
+          </li>
 
-          <span class="top_header_icon">
+          <li class="top_header_icon">
             <svg>
               <use xlink:href="#whatsapp"></use>
             </svg>
@@ -222,8 +228,8 @@
               <a href="https://wa.me/436602430111?utm_source=header&utm_medium=social&utm_campaign=whatsapp"
                 class="top_header_icon_subtitle" target="_blank" data-translate-key="topheader_contact">Contact</a>
             </div>
-          </span>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="main_header">
@@ -238,6 +244,7 @@
           <a href="#footer" class="header_nav_link" data-translate-key="header_contacts">Контакти</a>
         </nav>
         <div class="lang_switcher">
+          <label for="lang_select" class="visually-hidden">Select language</label>
           <select class="lang_select">
             <option value="de">Deutsch</option>
             <option value="en">English</option>
@@ -253,7 +260,8 @@
 
   <div class="burger-menu">
     <div class="lang_switcher">
-      <select class="lang_select">
+      <label for="lang_select" class="visually-hidden">Select language</label>
+      <select class="lang_select" aria-label="Change language">
         <option value="de">Deutsch</option>
         <option value="en">English</option>
         <option value="uk">Українська</option>

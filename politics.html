@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Auto Service Politics</title>
-    <script src="translation.js" defer></script>
+     <!-- JavaScripts -->
+  <script src="./js/lang-detector.js"></script>
+  <script src="./js/translation.js" defer></script>
     <link rel="icon" href="img/pageicon.jpg" type="image/jpg" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="politics.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/politics.css" />
+    
   </head>
   <body>
     <header style="display: block;">
@@ -19,12 +22,15 @@
               <span data-translate-key="backsite">Повернутись до сайту</span></a
             >
           </nav>
-          <div class="lang_switcher">
-            <select id="lang_select">
+          <div class="lang_switcher  lang_switcher_polytics">
+
+            <select class="lang_select lang_select_polytics" aria-label="Change language">
               <option value="de">Deutsch</option>
               <option value="en">English</option>
-              <option value="ua">Українська</option>
+              <option value="uk">Українська</option>
+              <option value="ru">Русский</option>
             </select>
+            <div class="select-arrow"></div>
           </div>
         </div>
       </div>
@@ -62,7 +68,7 @@
     </section>
     <div class="copyright">
       <p class="copyright_text">
-        Copyright © 2024<a
+        Copyright © 2025&nbsp;&nbsp;&nbsp;<a
           href="oferta.html"
           class="politics_link"
           data-translate-key="offerta"
