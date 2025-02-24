@@ -10,7 +10,6 @@ const modalResult = document.getElementById("result");
 const modalPhoneInput = document.querySelector(".input_phone");
 const lang = localStorage.getItem("selectedLang");
 
-console.log('script.js loaded');
 
 //Close Modal
 function closeModal() {

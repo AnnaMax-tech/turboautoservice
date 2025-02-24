@@ -783,11 +783,19 @@ header {
   margin-bottom: 100px;
 }
 
+
 .clients_content {
   display: flex;
   flex-direction: column;
   gap: 150px;
 }
+@media screen and (min-width:768px){
+  .clients_title {
+    margin-bottom: 0px;
+  }
+}
+
+
 
 .reviews {
   display: flex;
@@ -1134,7 +1142,7 @@ input:focus {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   .footer {
     position: relative;
     padding: 50px 0;

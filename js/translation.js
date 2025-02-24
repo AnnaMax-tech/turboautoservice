@@ -1,5 +1,5 @@
 // js/translation.js
-console.log('translation.js loaded!');
+
 const SUPPORTED_LANGUAGES = ['de', 'en', 'ru', 'uk'];
 const DEFAULT_LANGUAGE = 'en';
 

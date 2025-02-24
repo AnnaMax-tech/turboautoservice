@@ -1,39 +1,4 @@
-// js\sendToTelegram.js
-// const DEBUG = true; // Флаг для режиму розробки
-
-// function getUTMParams() {
-//     if (DEBUG) {
-//         // Тестові UTM-мітки для локальної розробки
-//         return {
-//             utm_source: 'test_source',
-//             utm_medium: 'test_medium',
-//             utm_campaign: 'test_campaign',
-//             utm_content: 'test_content',
-//             utm_term: 'test_term'
-//         };
-//     }
-
-//     const params = new URLSearchParams(window.location.search);
-//     const utmData = {
-//         utm_source: params.get('utm_source') || 'direct',
-//         utm_medium: params.get('utm_medium') || 'none',
-//         utm_campaign: params.get('utm_campaign') || 'none',
-//         utm_content: params.get('utm_content') || 'none',
-//         utm_term: params.get('utm_term') || 'none'
-//     };
-    
-//     console.log("UTM-метки:", utmData);
-//     return utmData;
-// }
-
-
-
-
-console.log("Файл sendToTelegram.js загружен!");
-
-
 // Функція отримання UTM-міток з URL
-console.log(window.location.href);
 
 function getUTMParams() {
     console.group('getUTMParams execution');
@@ -104,7 +69,7 @@ function getUTMParams() {
 
 // Функция для сохранения UTM-меток при первом посещении
 function saveInitialUtmParams() {
-    console.log('Saving initial UTM params');
+ 
     const params = new URLSearchParams(window.location.search);
     const utmData = {
         utm_source: params.get('utm_source'),
@@ -184,10 +149,6 @@ utm_term: ${utmParams.utm_term}`;
 // Экспорт функций в глобальную область видимости
 window.sendTelegram = sendTelegram;
 window.getUTMParams = getUTMParams;
-console.log("Функции sendTelegram и sendEmail2 добавлены в window!");
-
-// Add console log to verify script loading
-console.log("sendToTelegram.js loaded and functions attached to window!");
 
 // ===============================================================================
 

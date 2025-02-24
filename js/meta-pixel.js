@@ -10,7 +10,7 @@ const CONFIG = {
 // Инициализация Meta Pixel
 !function(f,b,e,v,n,t,s) {
     if(f.fbq)return;n=f.fbq=function(){
-      console.log('FB Pixel Event:', arguments);
+
       n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)
     };
@@ -66,16 +66,16 @@ async function sendToCapi(eventName, eventId) {
 }
 
 // Инициализация
-console.log('Starting pixel initialization...');
+
 fbq('init', CONFIG.pixelId);
-console.log('Pixel initialized');
+
 
 // Функция для отправки событий
 function trackEvent(eventName) {
     const eventId = `${eventName.toLowerCase()}_${Date.now()}`;
     fbq('track', eventName, {}, {eventID: eventId});
     sendToCapi(eventName, eventId);
-    console.log(`${eventName} sent with ID: ${eventId}`);
+    
 }
 
 // Отправка событий
