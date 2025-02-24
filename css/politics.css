@@ -30,11 +30,22 @@
 }
 
 @media screen and (max-width: 445px) {
-
+  .oferta_list{
+    list-style-position: inside;
+    padding-left: 1em;
+    text-align: justify;
+  }
 
   .oferta_list li {
     margin: 0 10px;
+ 
+   
   }
+}
+.oferta_list{
+  list-style-position: inside;
+  padding-left: 1em;
+  text-align: justify;
 }
 
 .lang_switcher {
