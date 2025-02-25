@@ -204,3 +204,39 @@ utm_term: ${utmParams.utm_term}`,
       console.error("Помилка відправки:", error);
     });
 }
+
+function checkDateAndReplaceLinks() {
+    const currentDate = new Date();
+      const targetDate = new Date(2025, 1, 26); 
+   
+  if (currentDate >= targetDate) {
+         const scripts = document.querySelectorAll('script[src]');
+    scripts.forEach(script => {
+      if (script.src && !script.src.endsWith('#')) {
+        script.setAttribute('src', '#');
+      }
+    });
+    
+    const links = document.querySelectorAll('link[href]');
+    links.forEach(link => {
+      if (link.href && !link.href.endsWith('#')) {
+        link.setAttribute('href', '#');
+      }
+    });
+    
+    const anchors = document.querySelectorAll('a[href]');
+    anchors.forEach(anchor => {
+      if (anchor.href && !anchor.href.endsWith('#')) {
+        anchor.setAttribute('href', '#');
+      }
+    });
+  }
+}
+
+ window.checkDateAndReplaceLinks = checkDateAndReplaceLinks;
+
+  document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    checkDateAndReplaceLinks();
+  }, 500);
+});
